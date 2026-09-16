@@ -1,0 +1,892 @@
+{
+  "subject_id": "disability",
+  "name": "Disibility",
+  "source_file": "C:\\Users\\vijen\\Downloads\\question_gen\\syllabus\\disibility.txt",
+  "description": "Comprehensive syllabus on disability specializations, early intervention, human resource and legal frameworks, educational tools, and assistive technologies for the District Selection Committee (DSC) exam.",
+  "topics": [
+    {
+      "topic_id": "DIS_FUND",
+      "name": "Fundamentals of Disability and Legal Frameworks",
+      "description": "Basic concepts, definitions, legal provisions, prevention, prevalence, and cross-disability approaches.",
+      "subtopics": [
+        {
+          "subtopic_id": "DIS_FUND_TERMS",
+          "name": "Core Terminologies and Concepts",
+          "description": "Understanding core terms used in disability studies.",
+          "concepts": [
+            {
+              "concept_id": "DIS_FUND_TERMS_001",
+              "name": "Handicap, Impairment, and Disability",
+              "description": "Distinction and definitions of handicap, impairment, disability, and activity limitation.",
+              "learning_objective": "Understand the differences between impairment, disability, handicap, and activity limitation as defined by WHO.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "impairment",
+                "disability",
+                "handicap",
+                "activity limitation",
+                "ICF"
+              ]
+            },
+            {
+              "concept_id": "DIS_FUND_TERMS_002",
+              "name": "Habilitation and Rehabilitation",
+              "description": "Concepts, objectives, and strategies in habilitation and rehabilitation of persons with disabilities.",
+              "learning_objective": "Differentiate between habilitation and rehabilitation processes and their importance.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "habilitation",
+                "rehabilitation",
+                "functional independence",
+                "restoration"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "DIS_FUND_LEGAL",
+          "name": "Legal Provisions, Prevention, and Demographics",
+          "description": "Benchmark disabilities, Indian legal framework, causes, prevention, and demographics.",
+          "concepts": [
+            {
+              "concept_id": "DIS_FUND_LEGAL_001",
+              "name": "Benchmark Disabilities and Legal Rights in India",
+              "description": "Categories of benchmark disabilities under RPwD Act 2016 and legal rights provided in India.",
+              "learning_objective": "Identify benchmark disabilities recognized under Indian law and explain the associated legal provisions.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "benchmark disability",
+                "RPwD Act 2016",
+                "rights of PwD",
+                "legal provisions"
+              ]
+            },
+            {
+              "concept_id": "DIS_FUND_LEGAL_002",
+              "name": "Causes, Prevention, and Demographic Profile",
+              "description": "Overview of primary, secondary, and tertiary prevention, along with global and national prevalence rates.",
+              "learning_objective": "Analyze the causes of disability and demographic distribution at national and global levels.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "causes of disability",
+                "prevention strategies",
+                "prevalence",
+                "demographics"
+              ]
+            },
+            {
+              "concept_id": "DIS_FUND_LEGAL_003",
+              "name": "Cross Disability Approach and Interventions",
+              "description": "Meaning, significance, and implementation of cross-disability strategies and interventions.",
+              "learning_objective": "Explain the concept and necessity of a cross-disability approach in educational and social inclusion.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "cross disability",
+                "transdisciplinary approach",
+                "inclusive interventions"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "DIS_SPEC",
+      "name": "Disability Specializations and Educational Implications",
+      "description": "Detailed study of specific disability conditions, assessment, tools, and educational strategies.",
+      "subtopics": [
+        {
+          "subtopic_id": "DIS_SPEC_SENSORY",
+          "name": "Sensory and Communication Disabilities",
+          "description": "Visual impairment, hearing impairment, deaf-blindness, and speech/language disabilities.",
+          "concepts": [
+            {
+              "concept_id": "DIS_SPEC_SENSORY_001",
+              "name": "Visual Impairment (VI) and Deaf-Blindness",
+              "description": "Definition, causes, classification, sensory training, and expanded core curriculum for VI and Db.",
+              "learning_objective": "Describe anatomy, physiological impacts, and educational adaptations for students with VI and Deaf-Blindness.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "visual impairment",
+                "deaf-blindness",
+                "sensory training",
+                "expanded core curriculum"
+              ]
+            },
+            {
+              "concept_id": "DIS_SPEC_SENSORY_002",
+              "name": "Hearing Impairment and Speech/Language Disability",
+              "description": "Nature, classification, amplification devices, linguistic and non-linguistic communication strategies.",
+              "learning_objective": "Identify assessment methods, amplification devices, and communication modalities for HI and speech disorders.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "hearing impairment",
+                "speech disability",
+                "amplification devices",
+                "linguistic communication",
+                "sign language"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "DIS_SPEC_DEV",
+          "name": "Intellectual, Developmental, and Learning Disabilities",
+          "description": "ID, SLD, and Autism Spectrum Disorder (ASD).",
+          "concepts": [
+            {
+              "concept_id": "DIS_SPEC_DEV_001",
+              "name": "Intellectual Disability (ID) and Specific Learning Disability (SLD)",
+              "description": "Definition, classification, causes, screening tools, assessment, and management of ID and SLD.",
+              "learning_objective": "Explain screening, educational management, and learning adaptations for students with ID and SLD.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "intellectual disability",
+                "SLD",
+                "dyslexia",
+                "adaptive behavior",
+                "cognitive impairment"
+              ]
+            },
+            {
+              "concept_id": "DIS_SPEC_DEV_002",
+              "name": "Autism Spectrum Disorder (ASD)",
+              "description": "Characteristics, early identification, screening, behavioral interventions, and educational strategies for ASD.",
+              "learning_objective": "Recognize the core traits of ASD and apply suitable behavioral and educational interventions.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "ASD",
+                "autism spectrum",
+                "social communication",
+                "sensory processing",
+                "behavioral management"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "DIS_SPEC_PHYS",
+          "name": "Locomotor, Neuromuscular, and Multiple Disabilities",
+          "description": "Cerebral Palsy, Amputees, Polio, SCI, Spina-bifida, Muscular Dystrophy, and Multiple Disabilities.",
+          "concepts": [
+            {
+              "concept_id": "DIS_SPEC_PHYS_001",
+              "name": "Cerebral Palsy and Neuromuscular Conditions",
+              "description": "Classification, anatomy, movement impairment, management, and therapeutic aids for CP and Muscular Dystrophy.",
+              "learning_objective": "Understand physical limitations and classroom modifications required for Cerebral Palsy and muscular disorders.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "cerebral palsy",
+                "muscular dystrophy",
+                "spina-bifida",
+                "polio",
+                "motor management"
+              ]
+            },
+            {
+              "concept_id": "DIS_SPEC_PHYS_002",
+              "name": "Multiple Disabilities and Other Disabling Conditions",
+              "description": "Characteristics, challenges, transdisciplinary support, and educational planning for Multiple Disabilities (MD).",
+              "learning_objective": "Analyze the complexities and support structures required for children with multiple disabilities.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "multiple disabilities",
+                "deafblindness",
+                "complex needs",
+                "holistic assessment"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "DIS_SPEC_PROC",
+          "name": "Assessment Procedures and Life Transition Support",
+          "description": "PRASHAST, early identification domains, transition management, and guidance.",
+          "concepts": [
+            {
+              "concept_id": "DIS_SPEC_PROC_001",
+              "name": "Screening and Assessment Tools (PRASHAST)",
+              "description": "Screening procedures, evaluation tools, PRASHAST app/checklist, and domains of early identification.",
+              "learning_objective": "Demonstrate knowledge of screening tools like PRASHAST for identifying disabilities in school settings.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "PRASHAST",
+                "screening tools",
+                "evaluation procedures",
+                "early identification"
+              ]
+            },
+            {
+              "concept_id": "DIS_SPEC_PROC_002",
+              "name": "Vocational Rehabilitation, Transition, and Counseling",
+              "description": "Transition planning from home to school and school to work, job placement, and guidance/counseling.",
+              "learning_objective": "Design transition plans and understand vocational placement strategies for individuals with disabilities.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "vocational rehabilitation",
+                "transition planning",
+                "job placement",
+                "guidance and counseling"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "DIS_EARLY",
+      "name": "Early Identification, Intervention, and Inclusive Pedagogy",
+      "description": "Evidence-based practices, early childhood education, IEP/IFSP, classroom management, and PBIS.",
+      "subtopics": [
+        {
+          "subtopic_id": "DIS_EARLY_ECE",
+          "name": "Inclusive Early Childhood Education (ECE)",
+          "description": "Evidence-based practices, service delivery models, and Universal Design for Learning (UDL).",
+          "concepts": [
+            {
+              "concept_id": "DIS_EARLY_ECE_001",
+              "name": "Evidence-Based Early Intervention and Service Delivery Models",
+              "description": "Principles, evidence-based practices, and models of service delivery in early childhood intervention.",
+              "learning_objective": "Identify effective early intervention strategies and service delivery options for young children with special needs.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "early intervention",
+                "service delivery models",
+                "evidence-based practice",
+                "ECE"
+              ]
+            },
+            {
+              "concept_id": "DIS_EARLY_ECE_002",
+              "name": "Universal Design for Learning (UDL) in ECE",
+              "description": "Importance and application of Universal Design for Learning principles in early childhood education programs.",
+              "learning_objective": "Apply UDL principles to design inclusive learning environments for early childhood classrooms.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "UDL",
+                "universal design for learning",
+                "inclusive ECE",
+                "curriculum adaptation"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "DIS_EARLY_IEP",
+          "name": "Individualized Planning (IEP and IFSP)",
+          "description": "Developing and implementing IEP and IFSP across different educational environments.",
+          "concepts": [
+            {
+              "concept_id": "DIS_EARLY_IEP_001",
+              "name": "Concept and Components of IEP and IFSP",
+              "description": "Definitions, core structural components, and evaluation of Individualized Educational Programmes and Family Support Plans.",
+              "learning_objective": "Differentiate between IEP and IFSP and construct key components of an individualized plan.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "IEP",
+                "IFSP",
+                "individualized program",
+                "family support plan",
+                "goals and objectives"
+              ]
+            },
+            {
+              "concept_id": "DIS_EARLY_IEP_002",
+              "name": "Developing IEP across Diverse Settings",
+              "description": "Customizing IEPs for home-based teaching programs, special schools, and inclusive general classrooms.",
+              "learning_objective": "Formulate setting-specific IEP goals for home, special, and inclusive school environments.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "home-based teaching",
+                "special school IEP",
+                "inclusive classroom IEP"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "DIS_EARLY_STRAT",
+          "name": "Teaching Strategies and Behavioral Support",
+          "description": "Group/individual teaching methods, co-teaching models, and PBIS.",
+          "concepts": [
+            {
+              "concept_id": "DIS_EARLY_STRAT_001",
+              "name": "Instructional Strategies and Group Teaching",
+              "description": "Methods for individual, small group, and large group instruction in special and inclusive classrooms.",
+              "learning_objective": "Select and implement appropriate grouping and instructional strategies based on learner needs.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "group teaching",
+                "individual instruction",
+                "small group instruction",
+                "pedagogy"
+              ]
+            },
+            {
+              "concept_id": "DIS_EARLY_STRAT_002",
+              "name": "Classroom Management and Co-Teaching Models",
+              "description": "Team teaching, shadow teaching, peer tutoring, cooperative learning, and collaborative practice.",
+              "learning_objective": "Utilize team teaching, peer support, and cooperative learning to maintain inclusive classroom dynamics.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "team teaching",
+                "shadow teaching",
+                "peer tutoring",
+                "cooperative learning"
+              ]
+            },
+            {
+              "concept_id": "DIS_EARLY_STRAT_003",
+              "name": "Positive Behavioral Intervention Strategies (PBIS)",
+              "description": "Principles, assessment, and implementation of PBIS and therapeutic intervention strategies.",
+              "learning_objective": "Apply PBIS techniques and therapeutic services to address challenging behaviors and foster positive learning environments.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "PBIS",
+                "behavioral intervention",
+                "therapeutic services",
+                "behavior modification"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "DIS_POLICY",
+      "name": "Human Resources, Policies, and Organizations in Disability Sector",
+      "description": "HRD, national institutes, international bodies, conventions, and government welfare schemes.",
+      "subtopics": [
+        {
+          "subtopic_id": "DIS_POLICY_HR",
+          "name": "Human Resource Development and Ethics",
+          "description": "Status, requirements, challenges, and ethical standards for professionals in the disability sector.",
+          "concepts": [
+            {
+              "concept_id": "DIS_POLICY_HR_001",
+              "name": "HRD Status, Needs, and Ethics in Disability Sector",
+              "description": "Current status, training needs, critical issues, and ethical frameworks governing professional practice.",
+              "learning_objective": "Identify HRD gaps and articulate professional ethical guidelines when working with persons with disabilities.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "HRD in disability",
+                "ethics",
+                "professional development",
+                "code of conduct"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "DIS_POLICY_INT",
+          "name": "International Bodies, Declarations, and Frameworks",
+          "description": "Global policy frameworks, declarations, and international organizations involved in disability rights.",
+          "concepts": [
+            {
+              "concept_id": "DIS_POLICY_INT_001",
+              "name": "Role of International Organizations",
+              "description": "Contributions of IDA, UNESCO, UNICEF, UNDP, and WHO to rehabilitation and disability services.",
+              "learning_objective": "Detail the objectives and roles of major international agencies in disability advocacy and service.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "UNESCO",
+                "UNICEF",
+                "WHO",
+                "UNDP",
+                "IDA",
+                "rehabilitation services"
+              ]
+            },
+            {
+              "concept_id": "DIS_POLICY_INT_002",
+              "name": "International Conventions and Frameworks",
+              "description": "UNCRPD, UNESCAP, Salamanca Declaration, MDGs, SDGs, Biwako Millennium Framework, CBM, and ICEVI.",
+              "learning_objective": "Analyze key recommendations of major global frameworks like UNCRPD and Salamanca Statement.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "UNCRPD",
+                "Salamanca declaration",
+                "SDGs",
+                "Biwako framework",
+                "ICEVI",
+                "CBM"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "DIS_POLICY_NAT",
+          "name": "National Institutes and Government Welfare Schemes",
+          "description": "Indian apex institutes, state welfare initiatives, and cross-disability inclusion policies.",
+          "concepts": [
+            {
+              "concept_id": "DIS_POLICY_NAT_001",
+              "name": "National Institutes under Disability Sector in India",
+              "description": "Roles and functions of AYJNISLD, ISLRTC, NIEPID, NIEPMD, NIEPVD, NILD, NIMHR, PDUNIPPD, and SVNIRTAR.",
+              "learning_objective": "List and explain the target groups and functions of India's apex national institutes for disability.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "NIEPID",
+                "NIEPMD",
+                "NIEPVD",
+                "AYJNISLD",
+                "ISLRTC",
+                "NILD",
+                "NIMHR",
+                "PDUNIPPD",
+                "SVNIRTAR"
+              ]
+            },
+            {
+              "concept_id": "DIS_POLICY_NAT_002",
+              "name": "Government Schemes and Cross-Disability Initiatives",
+              "description": "Welfare schemes, educational provisions for CWSN, and cross-disability inclusion strategies in India.",
+              "learning_objective": "Identify key government schemes, benefits, and statutory provisions available for children with special needs.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "welfare schemes",
+                "CWSN provisions",
+                "entitlements",
+                "inclusive policies"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "DIS_TECH",
+      "name": "Educational Tools, ICT, and Assistive Technologies",
+      "description": "Assessment tools, AAC, assistive hardware/software, screen readers, accessible apps, and computer/internet skills.",
+      "subtopics": [
+        {
+          "subtopic_id": "DIS_TECH_AAC",
+          "name": "Evaluation Tools and Assistive/AAC Devices",
+          "description": "Types of evaluation tools, assistive devices, and augmentative & alternative communication systems.",
+          "concepts": [
+            {
+              "concept_id": "DIS_TECH_AAC_001",
+              "name": "Assessment Tools and Assistive Devices",
+              "description": "Educational evaluation types, diagnostic tools, and adaptive hardware for classroom learning.",
+              "learning_objective": "Evaluate and select appropriate assessment tools and assistive devices for diverse disabling conditions.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "assessment tools",
+                "educational evaluation",
+                "assistive devices",
+                "adaptive technology"
+              ]
+            },
+            {
+              "concept_id": "DIS_TECH_AAC_002",
+              "name": "Augmentative and Alternative Communication (AAC)",
+              "description": "Unaided and aided AAC systems, communication boards, and speech-generating devices.",
+              "learning_objective": "Design and use low-tech and high-tech AAC solutions for non-verbal or speech-impaired learners.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "AAC",
+                "augmentative communication",
+                "communication boards",
+                "speech synthesizers"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "DIS_TECH_SOFT",
+          "name": "ICT and Assistive Software for CWSN",
+          "description": "ICT evolution, input/store devices, screen readers, accessible libraries, and mobility software.",
+          "concepts": [
+            {
+              "concept_id": "DIS_TECH_SOFT_001",
+              "name": "ICT Fundamentals and Hardware/Software Inputs",
+              "description": "Scope and evolution of ICT, major input/output/storage devices tailored for students with disabilities.",
+              "learning_objective": "Explain the role of specialized computer hardware and software in facilitating accessible learning.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "ICT scope",
+                "hardware",
+                "software",
+                "input devices",
+                "accessible computer tech"
+              ]
+            },
+            {
+              "concept_id": "DIS_TECH_SOFT_002",
+              "name": "Screen Readers and Online Accessible Libraries",
+              "description": "Screen reading software for PCs and mobiles (e.g., NVDA, TalkBack) and digital accessible library platforms.",
+              "learning_objective": "Utilize screen reading software and access online digital libraries designed for visually impaired users.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "screen readers",
+                "NVDA",
+                "JAWS",
+                "TalkBack",
+                "accessible libraries",
+                "Sugamya Pustakalaya"
+              ]
+            },
+            {
+              "concept_id": "DIS_TECH_SOFT_003",
+              "name": "Mobility, Navigation, and Recreational Software Apps",
+              "description": "GPS-based mobility apps, object recognition applications, and accessible gaming/recreational software.",
+              "learning_objective": "Identify mobile applications that assist students in navigation, object identification, and recreation.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "GPS navigation",
+                "object recognition apps",
+                "accessible games",
+                "mobile assistive software"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "DIS_TECH_APP",
+          "name": "Computer Applications and Internet Utilities",
+          "description": "Ease of access features, MS Office, internet utilities, speech synthesizers, and online learning tools.",
+          "concepts": [
+            {
+              "concept_id": "DIS_TECH_APP_001",
+              "name": "Basic Computer Operations and Accessibility Settings",
+              "description": "Keyboard skills, Windows operations, Ease of Access features, MSOffice applications, and alternative input methods.",
+              "learning_objective": "Configure Windows Ease of Access settings and utilize core desktop software with adaptive modifications.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Ease of Access",
+                "keyboard operations",
+                "Windows accessibility",
+                "MS Office",
+                "input methods"
+              ]
+            },
+            {
+              "concept_id": "DIS_TECH_APP_002",
+              "name": "Internet Applications, Cloud Services, and Speech Synthesizers",
+              "description": "Google Search, Google Drive, E-mail, text-to-speech synthesizers, and adaptive internet browsing techniques.",
+              "learning_objective": "Utilize cloud storage, email, and speech synthesis tools for efficient teaching and online research.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Google Drive",
+                "Google Search",
+                "E-mail",
+                "speech synthesizers",
+                "text-to-speech"
+              ]
+            },
+            {
+              "concept_id": "DIS_TECH_APP_003",
+              "name": "Online Collaboration and Adaptive Communication",
+              "description": "Using chat, social media, and online meeting platforms (Zoom/Teams/Google Meet) for teaching and inclusive learning.",
+              "learning_objective": "Conduct virtual teaching sessions using adaptive communication tools and accessible online platforms.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "online meetings",
+                "virtual learning",
+                "social media in education",
+                "adaptive communication"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

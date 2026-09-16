@@ -1,0 +1,23 @@
+{
+  "blueprint_id": "667f950f-e8f7-41f9-a4c0-2f4abba5be8b",
+  "exam": "DSC",
+  "subject": "Psycolgy",
+  "total_questions": 10,
+  "topic_distribution": {
+    "Human Development and Psychosocial Aspects": 3,
+    "Psychology, Educational Psychology, and Learning Theories": 4,
+    "Learner Diversity, Motivation, and Socio-Cultural Contexts": 2,
+    "Psychological Processes in Disability Contexts": 1
+  },
+  "difficulty_distribution": {
+    "easy": 2,
+    "medium": 6,
+    "hard": 2
+  },
+  "question_type_distribution": {
+    "analytical": 3,
+    "application": 3,
+    "problem_solving": 2,
+    "conceptual": 2
+  }
+}

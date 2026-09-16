@@ -1,0 +1,544 @@
+{
+  "subject_id": "psychology",
+  "name": "Psycolgy",
+  "source_file": "C:\\Users\\vijen\\Downloads\\question_gen\\syllabus\\psycolgy.txt",
+  "description": "Educational psychology with special reference to Children with Special Needs (CWSN) covering human development, learning theories, motivation, socio-cultural influences, and psychological processes.",
+  "topics": [
+    {
+      "topic_id": "PSY_DEV",
+      "name": "Human Development and Psychosocial Aspects",
+      "description": "Theoretical approaches to human development across life stages and psychosocial impact of disability on family dynamics.",
+      "subtopics": [
+        {
+          "subtopic_id": "PSY_DEV_STAGES",
+          "name": "Approaches and Stages of Human Development",
+          "description": "Theories and progression through major life stages from early years to adulthood.",
+          "concepts": [
+            {
+              "concept_id": "PSY_DEV_STAGES_001",
+              "name": "Theoretical Approaches to Human Development",
+              "description": "Overview of major theoretical perspectives explaining human growth and developmental changes.",
+              "learning_objective": "Understand foundational developmental theories and their perspectives on human growth.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Developmental Theories",
+                "Growth Principles",
+                "Human Development"
+              ]
+            },
+            {
+              "concept_id": "PSY_DEV_STAGES_002",
+              "name": "The Early Years Stage",
+              "description": "Physical, cognitive, and socio-emotional milestones during early childhood.",
+              "learning_objective": "Identify key milestones and developmental characteristics of early childhood.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Early Childhood",
+                "Milestones",
+                "Early Development"
+              ]
+            },
+            {
+              "concept_id": "PSY_DEV_STAGES_003",
+              "name": "Adolescence Stage",
+              "description": "Physical, cognitive, and social changes during adolescent development.",
+              "learning_objective": "Analyze developmental challenges and characteristics during the adolescent stage.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Adolescence",
+                "Identity",
+                "Puberty",
+                "Peer Relations"
+              ]
+            },
+            {
+              "concept_id": "PSY_DEV_STAGES_004",
+              "name": "Transition into Adulthood",
+              "description": "Key transitions, adjustments, and developmental goals moving from adolescence into adulthood.",
+              "learning_objective": "Understand the challenges and adjustments during the transition to adult life.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Adulthood Transition",
+                "Independence",
+                "Maturation"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "PSY_DEV_FAMILY",
+          "name": "Psychosocial Aspects and Family Issues",
+          "description": "Psychosocial implications of disability and challenges faced by families of CWSN.",
+          "concepts": [
+            {
+              "concept_id": "PSY_DEV_FAMILY_001",
+              "name": "Psychosocial Aspects of Disability",
+              "description": "Social and psychological impact of living with a disability on self-concept and social interactions.",
+              "learning_objective": "Explain the psychosocial challenges and emotional dynamics surrounding disability.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Psychosocial Impact",
+                "Stigma",
+                "Self-Concept",
+                "Disability"
+              ]
+            },
+            {
+              "concept_id": "PSY_DEV_FAMILY_002",
+              "name": "Family Issues and Disability Dynamics",
+              "description": "Stress, coping strategies, adaptation, and systemic impacts on families raising children with special needs.",
+              "learning_objective": "Identify family dynamics, coping mechanisms, and support strategies for families of CWSN.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Family Stress",
+                "Parental Coping",
+                "Support Systems",
+                "Family Adaptation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "PSY_LEARN",
+      "name": "Psychology, Educational Psychology, and Learning Theories",
+      "description": "Foundations of educational psychology, intelligence, and classical/modern theories of learning.",
+      "subtopics": [
+        {
+          "subtopic_id": "PSY_LEARN_FOUNDATIONS",
+          "name": "Educational Psychology and Intelligence",
+          "description": "Relevance, scope, and fundamental concepts of educational psychology and human intelligence.",
+          "concepts": [
+            {
+              "concept_id": "PSY_LEARN_FOUNDATIONS_001",
+              "name": "Educational Psychology: Relevance and Scope",
+              "description": "Definition, significance, and applications of psychology in educational settings.",
+              "learning_objective": "Understand the scope and application of educational psychology in teaching-learning environments.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Educational Psychology",
+                "Teaching-Learning",
+                "Scope of Psychology"
+              ]
+            },
+            {
+              "concept_id": "PSY_LEARN_FOUNDATIONS_002",
+              "name": "Intelligence and Assessment",
+              "description": "Concepts, theories, and measurement of intelligence in diverse learning contexts.",
+              "learning_objective": "Analyze theories of intelligence and their relevance to individual differences in learning.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Intelligence",
+                "IQ",
+                "Cognitive Abilities",
+                "Multiple Intelligences"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "PSY_LEARN_THEORIES",
+          "name": "Basic Principles and Theories of Learning",
+          "description": "Core psychological theories explaining how learning occurs in individuals.",
+          "concepts": [
+            {
+              "concept_id": "PSY_LEARN_THEORIES_001",
+              "name": "Thorndike's Connectionism / Trial and Error Theory",
+              "description": "Thorndike's laws of learning including Law of Effect, Exercise, and Readiness.",
+              "learning_objective": "Apply Thorndike's laws of learning to classroom situations.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Thorndike",
+                "Trial and Error",
+                "Law of Effect",
+                "Connectionism"
+              ]
+            },
+            {
+              "concept_id": "PSY_LEARN_THEORIES_002",
+              "name": "Pavlov's Classical Conditioning",
+              "description": "Principles of stimulus-response association, conditioned responses, extinction, and generalization.",
+              "learning_objective": "Explain the mechanics and educational applications of classical conditioning.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Pavlov",
+                "Classical Conditioning",
+                "Conditioned Stimulus",
+                "Conditioned Response"
+              ]
+            },
+            {
+              "concept_id": "PSY_LEARN_THEORIES_003",
+              "name": "Skinner's Operant Conditioning",
+              "description": "Reinforcement, punishment, shaping, and behavior modification techniques.",
+              "learning_objective": "Demonstrate understanding of operant conditioning principles and behavior reinforcement.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Skinner",
+                "Operant Conditioning",
+                "Reinforcement",
+                "Behavior Modification"
+              ]
+            },
+            {
+              "concept_id": "PSY_LEARN_THEORIES_004",
+              "name": "Bandura's Social Learning Theory",
+              "description": "Observational learning, modeling, vicarious reinforcement, and self-efficacy.",
+              "learning_objective": "Understand social cognitive theory and observational learning processes.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Bandura",
+                "Social Learning",
+                "Observational Learning",
+                "Modeling"
+              ]
+            },
+            {
+              "concept_id": "PSY_LEARN_THEORIES_005",
+              "name": "Piaget's Theory of Cognitive Development",
+              "description": "Stages of cognitive development, schema, assimilation, accommodation, and equilibration.",
+              "learning_objective": "Apply Piaget's constructivist principles and cognitive stages to instruction.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Piaget",
+                "Cognitive Development",
+                "Constructivism",
+                "Schema"
+              ]
+            },
+            {
+              "concept_id": "PSY_LEARN_THEORIES_006",
+              "name": "Vygotsky's Socio-Cultural Theory",
+              "description": "Zone of Proximal Development (ZPD), scaffolding, and the role of social interaction and culture.",
+              "learning_objective": "Utilize Vygotsky's socio-cultural concepts like ZPD and scaffolding in special education contexts.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Vygotsky",
+                "Socio-Cultural",
+                "ZPD",
+                "Scaffolding"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "PSY_FACTORS",
+      "name": "Learner Diversity, Motivation, and Socio-Cultural Contexts",
+      "description": "Individual learning styles, learner types, motivational dynamics, and socio-cultural factors impacting CWSN.",
+      "subtopics": [
+        {
+          "subtopic_id": "PSY_FACTORS_STYLES",
+          "name": "Learning Styles and Motivation",
+          "description": "Variations in how individuals learn and psychological mechanisms of motivation.",
+          "concepts": [
+            {
+              "concept_id": "PSY_FACTORS_STYLES_001",
+              "name": "Learning Styles and Types of Learners",
+              "description": "Visual, auditory, kinesthetic, and individual learning preferences among diverse students.",
+              "learning_objective": "Identify different learning styles and adapt instruction to diverse learner profiles.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Learning Styles",
+                "Visual Learners",
+                "Auditory Learners",
+                "Kinesthetic Learners"
+              ]
+            },
+            {
+              "concept_id": "PSY_FACTORS_STYLES_002",
+              "name": "Motivation in Learning",
+              "description": "Intrinsic and extrinsic motivation, achievement motivation, and methods to motivate learners.",
+              "learning_objective": "Evaluate motivational theories and strategies to engage students with diverse learning needs.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Intrinsic Motivation",
+                "Extrinsic Motivation",
+                "Drive",
+                "Goal Orientation"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "PSY_FACTORS_SOCIOCULTURAL",
+          "name": "Socio-Cultural Factors and CWSN Implications",
+          "description": "Impact of socio-cultural background on learning and specialized implications for CWSN.",
+          "concepts": [
+            {
+              "concept_id": "PSY_FACTORS_SOCIOCULTURAL_001",
+              "name": "Socio-Cultural Factors Affecting Learning",
+              "description": "Role of family environment, socio-economic status, community background, and culture in learning outcomes.",
+              "learning_objective": "Analyze how socio-cultural factors influence student engagement and achievement.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Socio-Cultural Context",
+                "Environment",
+                "Cultural Diversity",
+                "Equity"
+              ]
+            },
+            {
+              "concept_id": "PSY_FACTORS_SOCIOCULTURAL_002",
+              "name": "Implications for Children with Special Needs (CWSN)",
+              "description": "Educational adaptations, inclusive practices, and barrier-free learning environments for CWSN.",
+              "learning_objective": "Formulate pedagogical strategies tailored to the socio-cultural and learning needs of CWSN.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "CWSN",
+                "Inclusion",
+                "Special Needs Pedagogy",
+                "Adaptations"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "PSY_PROCESSES",
+      "name": "Psychological Processes in Disability Contexts",
+      "description": "Cognitive and psychological functions and their pedagogical implications across various types of disabilities.",
+      "subtopics": [
+        {
+          "subtopic_id": "PSY_PROCESSES_IMPLICATE",
+          "name": "Psychological Processes and Disability Impacts",
+          "description": "Attention, perception, memory, thinking, and emotional processes in children with diverse disabilities.",
+          "concepts": [
+            {
+              "concept_id": "PSY_PROCESSES_IMPLICATE_001",
+              "name": "Cognitive and Psychological Processes",
+              "description": "Mechanisms of attention, sensory perception, memory processing, problem solving, and language comprehension.",
+              "learning_objective": "Understand key cognitive processes involved in learning and knowledge acquisition.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Cognitive Processes",
+                "Attention",
+                "Perception",
+                "Memory",
+                "Information Processing"
+              ]
+            },
+            {
+              "concept_id": "PSY_PROCESSES_IMPLICATE_002",
+              "name": "Implications for Sensory and Physical Impairments",
+              "description": "How visual, hearing, and physical disabilities alter psychological processing and educational needs.",
+              "learning_objective": "Assess psychological and learning implications for children with visual, auditory, or motor impairments.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Sensory Impairment",
+                "Visual Impairment",
+                "Hearing Impairment",
+                "Physical Disability"
+              ]
+            },
+            {
+              "concept_id": "PSY_PROCESSES_IMPLICATE_003",
+              "name": "Implications for Cognitive and Neurological Impairments",
+              "description": "Psychological process alterations in intellectual disability, specific learning disabilities, and autism spectrum conditions.",
+              "learning_objective": "Identify instructional and psychological support required for children with cognitive and neurodevelopmental conditions.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Intellectual Disability",
+                "Learning Disability",
+                "Autism Spectrum",
+                "Neurodevelopmental"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

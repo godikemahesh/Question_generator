@@ -1,0 +1,26 @@
+{
+  "blueprint_id": "f564722a-f5be-4edd-a483-ea6db9beb1e1",
+  "exam": "DSC",
+  "subject": "Sped Methodology",
+  "total_questions": 30,
+  "topic_distribution": {
+    "Methodology for Intellectual Disability (ID)": 4,
+    "Methodology for Hearing Impairment (HI)": 5,
+    "Methodology for Visual Impairment (VI)": 4,
+    "Methodology for Specific Learning Disability (SLD)": 4,
+    "Methodology for Autism Spectrum Disorder (ASD)": 4,
+    "Methodology for Cerebral Palsy (CP)": 4,
+    "Methodology for Multiple Disabilities (MD)": 5
+  },
+  "difficulty_distribution": {
+    "easy": 6,
+    "medium": 18,
+    "hard": 6
+  },
+  "question_type_distribution": {
+    "analytical": 9,
+    "application": 9,
+    "problem_solving": 6,
+    "conceptual": 6
+  }
+}

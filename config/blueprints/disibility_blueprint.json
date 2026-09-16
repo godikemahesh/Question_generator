@@ -1,0 +1,24 @@
+{
+  "blueprint_id": "0d1cf9b3-50bc-451c-a477-408993baa860",
+  "exam": "DSC",
+  "subject": "Disibility",
+  "total_questions": 90,
+  "topic_distribution": {
+    "Fundamentals of Disability and Legal Frameworks": 14,
+    "Disability Specializations and Educational Implications": 22,
+    "Early Identification, Intervention, and Inclusive Pedagogy": 19,
+    "Human Resources, Policies, and Organizations in Disability Sector": 14,
+    "Educational Tools, ICT, and Assistive Technologies": 21
+  },
+  "difficulty_distribution": {
+    "easy": 18,
+    "medium": 54,
+    "hard": 18
+  },
+  "question_type_distribution": {
+    "analytical": 27,
+    "application": 27,
+    "problem_solving": 18,
+    "conceptual": 18
+  }
+}

@@ -1,0 +1,871 @@
+{
+  "subject_id": "perspectives_special_ed",
+  "name": "Perspectives  Special Ed",
+  "source_file": "C:\\Users\\vijen\\Downloads\\question_gen\\syllabus\\perspectives _special_ed.txt",
+  "description": "Comprehensive syllabus covering philosophical foundations, educational agencies, historical models, policy frameworks, and instructional strategies for Special and Inclusive Education in the DSC examination.",
+  "topics": [
+    {
+      "topic_id": "PSE_PHILOSOPHICAL_FOUNDATIONS",
+      "name": "Philosophical Foundations of Education",
+      "description": "Study of major educational philosophies, western and Indian philosophical thinkers, and pioneers in special education.",
+      "subtopics": [
+        {
+          "subtopic_id": "PSE_PHILOSOPHICAL_FOUNDATIONS_CONCEPTS",
+          "name": "Meaning and Schools of Philosophy",
+          "description": "Fundamental concepts of educational philosophy and major western educational philosophies.",
+          "concepts": [
+            {
+              "concept_id": "PSE_PHILOSOPHICAL_FOUNDATIONS_CONCEPTS_001",
+              "name": "Educational Philosophy & Practice",
+              "description": "Definition of educational philosophy and its foundational relationship with educational practices and classroom strategies.",
+              "learning_objective": "Understand the meaning of educational philosophy and explain how philosophy guides practical educational decision-making.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "educational philosophy",
+                "pedagogy",
+                "educational practice"
+              ]
+            },
+            {
+              "concept_id": "PSE_PHILOSOPHICAL_FOUNDATIONS_CONCEPTS_002",
+              "name": "Idealism and Naturalism",
+              "description": "Core principles of Idealism and Naturalism and their implications for education.",
+              "learning_objective": "Differentiate between Idealist and Naturalist approaches to curriculum, teacher roles, and student learning.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "idealism",
+                "naturalism",
+                "philosophical schools"
+              ]
+            },
+            {
+              "concept_id": "PSE_PHILOSOPHICAL_FOUNDATIONS_CONCEPTS_003",
+              "name": "Pragmatism and Humanism",
+              "description": "Key beliefs of Pragmatism and Humanism in shaping child-centric and experiential learning.",
+              "learning_objective": "Analyze the impact of pragmatism and humanistic values in special and general education settings.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "pragmatism",
+                "humanism",
+                "child-centered education"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "PSE_PHILOSOPHICAL_FOUNDATIONS_THINKERS",
+          "name": "Prominent Western and Indian Philosophers",
+          "description": "Educational thoughts and principles of key thinkers in Western and Indian contexts.",
+          "concepts": [
+            {
+              "concept_id": "PSE_PHILOSOPHICAL_FOUNDATIONS_THINKERS_001",
+              "name": "Western Thinkers: Dewey, Kilpatrick, and Rousseau",
+              "description": "Contributions of John Dewey (Progressivism), William Kilpatrick (Project Method), and Jean-Jacques Rousseau (Naturalism).",
+              "learning_objective": "Identify the key pedagogical contributions of Dewey, Kilpatrick, and Rousseau.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "John Dewey",
+                "Kilpatrick",
+                "Rousseau",
+                "Project Method"
+              ]
+            },
+            {
+              "concept_id": "PSE_PHILOSOPHICAL_FOUNDATIONS_THINKERS_002",
+              "name": "Indian Educational Philosophers",
+              "description": "Educational vision and principles of Mahatma Gandhi (Nai Talim), Sri Aurobindo (Integral Education), Rabindranath Tagore (Vishva Bharati), and Swami Vivekananda (Man-making education).",
+              "learning_objective": "Explain the educational philosophies of prominent Indian thinkers and their relevance to holistic learning.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Mahatma Gandhi",
+                "Sri Aurobindo",
+                "Tagore",
+                "Vivekananda",
+                "Nai Talim"
+              ]
+            },
+            {
+              "concept_id": "PSE_PHILOSOPHICAL_FOUNDATIONS_THINKERS_003",
+              "name": "Pioneers in Special Education",
+              "description": "Contributions of pioneers like Jean-Marc-Gaspard Itard and Helen Keller to special education methodology.",
+              "learning_objective": "Examine the early historical breakthroughs and methods established by pioneers like Itard and Helen Keller.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Jean-Marc-Gaspard Itard",
+                "Helen Keller",
+                "special education history"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "PSE_AGENCIES_AND_MODES",
+      "name": "Agencies, Modes, and Contexts of Education",
+      "description": "Types of educational agencies, learning modes, diverse school contexts, and institutional governance.",
+      "subtopics": [
+        {
+          "subtopic_id": "PSE_AGENCIES_AND_MODES_TYPES",
+          "name": "Agencies and Modes of Education",
+          "description": "Formal, informal, and non-formal agencies alongside regular, open, distance, and blended delivery modes.",
+          "concepts": [
+            {
+              "concept_id": "PSE_AGENCIES_AND_MODES_TYPES_001",
+              "name": "Formal, Informal, and Non-Formal Agencies",
+              "description": "Characteristics and structures of formal, informal, and non-formal agencies of education.",
+              "learning_objective": "Distinguish between formal, informal, and non-formal educational settings and their roles in learning.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "formal education",
+                "informal education",
+                "non-formal education"
+              ]
+            },
+            {
+              "concept_id": "PSE_AGENCIES_AND_MODES_TYPES_002",
+              "name": "Modes of Educational Delivery",
+              "description": "Regular classroom education, open schooling, distance and online education, and blended learning models.",
+              "learning_objective": "Compare different modes of learning and evaluate their application for learners with diverse needs.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "distance learning",
+                "open schooling",
+                "blended learning",
+                "online education"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "PSE_AGENCIES_AND_MODES_CONTEXTS",
+          "name": "Schooling Contexts and Educational Organizations",
+          "description": "Types of schools, home-based education, family/community roles, and institutional support bodies.",
+          "concepts": [
+            {
+              "concept_id": "PSE_AGENCIES_AND_MODES_CONTEXTS_001",
+              "name": "Types of Schools and Learning Settings",
+              "description": "Comparison of regular schools, inclusive schools, special schools, and home-based educational programs.",
+              "learning_objective": "Differentiate between regular, inclusive, special, and home-based learning contexts for children with special needs.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "special school",
+                "inclusive school",
+                "regular school",
+                "home-based education"
+              ]
+            },
+            {
+              "concept_id": "PSE_AGENCIES_AND_MODES_CONTEXTS_002",
+              "name": "Community, Family, and Mass Media",
+              "description": "The influence and role of family, local community, and mass media as educational agencies.",
+              "learning_objective": "Describe how family, mass media, and community networks support non-formal and inclusive education.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "community participation",
+                "family role",
+                "mass media"
+              ]
+            },
+            {
+              "concept_id": "PSE_AGENCIES_AND_MODES_CONTEXTS_003",
+              "name": "Role of Governmental Organizations",
+              "description": "Roles and functions of NCERT, SCERT, NCTE, UGC, and the Ministry of Education in policy formulation and quality control.",
+              "learning_objective": "Identify the primary administrative and professional functions of national and state educational organizations.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "NCERT",
+                "SCERT",
+                "NCTE",
+                "UGC",
+                "Ministry of Education"
+              ]
+            },
+            {
+              "concept_id": "PSE_AGENCIES_AND_MODES_CONTEXTS_004",
+              "name": "Role of National and International NGOs",
+              "description": "Contribution of non-governmental organizations in promoting inclusive education and disability rights.",
+              "learning_objective": "Assess the impact of national and international NGOs in supporting education for children with disabilities.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "NGOs",
+                "voluntary agencies",
+                "disability advocacy"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "PSE_PERSPECTIVES_IN_SPECIAL_ED",
+      "name": "Perspectives in Special Education - Ancient to Contemporary",
+      "description": "Historical evolution, disability models, paradigm shifts, inclusive practices, and universal designs for instruction.",
+      "subtopics": [
+        {
+          "subtopic_id": "PSE_PERSPECTIVES_IN_SPECIAL_ED_HISTORY",
+          "name": "History, Diversity, and Models of Disability",
+          "description": "Historical trajectory of disability awareness, models of disability, and understanding learner diversity.",
+          "concepts": [
+            {
+              "concept_id": "PSE_PERSPECTIVES_IN_SPECIAL_ED_HISTORY_001",
+              "name": "Historical Evolution & Models of Disability",
+              "description": "National and international historical shifts in treating disability; medical, charity, social, and human-rights models.",
+              "learning_objective": "Compare various models of disability and trace the historical progression toward rights-based perspectives.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "medical model",
+                "social model",
+                "charity model",
+                "human rights model"
+              ]
+            },
+            {
+              "concept_id": "PSE_PERSPECTIVES_IN_SPECIAL_ED_HISTORY_002",
+              "name": "Addressing Diverse Learning Needs",
+              "description": "Understanding individual differences, types of diversity in classroom settings, and addressing special needs.",
+              "learning_objective": "Recognize classroom diversity and plan instructional responses for heterogeneous student populations.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "diversity",
+                "individual differences",
+                "classroom diversity"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "PSE_PERSPECTIVES_IN_SPECIAL_ED_INCLUSION",
+          "name": "Paradigms and Principles of Inclusive Education",
+          "description": "Transition from segregation to inclusion, barriers to inclusion, Universal Design for Learning (UDL), and differentiation.",
+          "concepts": [
+            {
+              "concept_id": "PSE_PERSPECTIVES_IN_SPECIAL_ED_INCLUSION_001",
+              "name": "Segregation, Integration, and Inclusion",
+              "description": "Conceptual contrast between segregation, integrated education, and true social and academic inclusion.",
+              "learning_objective": "Differentiate between segregation, integration, and inclusion in special education history and practice.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "segregation",
+                "integration",
+                "inclusion",
+                "marginalization"
+              ]
+            },
+            {
+              "concept_id": "PSE_PERSPECTIVES_IN_SPECIAL_ED_INCLUSION_002",
+              "name": "Principles and Barriers of Inclusive Education",
+              "description": "Core principles underlying inclusive schools and systemic, attitudinal, and environmental barriers to inclusion.",
+              "learning_objective": "Identify key barriers to inclusive education and formulate strategies to mitigate them.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "barriers to inclusion",
+                "attitudinal barriers",
+                "environmental barriers"
+              ]
+            },
+            {
+              "concept_id": "PSE_PERSPECTIVES_IN_SPECIAL_ED_INCLUSION_003",
+              "name": "Universal Design for Learning (UDL)",
+              "description": "Principles of UDL: multiple means of engagement, representation, and action/expression.",
+              "learning_objective": "Apply UDL principles to design learning environments accessible to all students.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "UDL",
+                "Universal Design for Learning",
+                "accessibility"
+              ]
+            },
+            {
+              "concept_id": "PSE_PERSPECTIVES_IN_SPECIAL_ED_INCLUSION_004",
+              "name": "Differentiated Teaching and Co-Teaching Methods",
+              "description": "Strategies for differentiated instruction and collaborative co-teaching models between regular and special educators.",
+              "learning_objective": "Select appropriate co-teaching strategies and differentiation methods for inclusive classrooms.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "differentiated teaching",
+                "co-teaching",
+                "team teaching"
+              ]
+            },
+            {
+              "concept_id": "PSE_PERSPECTIVES_IN_SPECIAL_ED_INCLUSION_005",
+              "name": "Stakeholders, Community, and Resource Mobilization",
+              "description": "Roles of parents, school staff, local community, and resource mobilization in sustaining inclusive educational ecosystems.",
+              "learning_objective": "Explain the responsibilities of community stakeholders and techniques for resource mobilization in inclusive setups.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "stakeholder roles",
+                "community participation",
+                "resource mobilization"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "PSE_POLICIES_AND_FRAMEWORKS",
+      "name": "Educational Foundations in India - Policies & Frameworks",
+      "description": "Constitutional provisions, educational commissions, national policies, frameworks, and legal acts facilitating inclusion.",
+      "subtopics": [
+        {
+          "subtopic_id": "PSE_POLICIES_AND_FRAMEWORKS_CONSTITUTIONAL",
+          "name": "Constitutional Provisions and Early Commissions",
+          "description": "Indian Constitution, Fundamental Rights, Article 21A, and landmark early educational commissions.",
+          "concepts": [
+            {
+              "concept_id": "PSE_POLICIES_AND_FRAMEWORKS_CONSTITUTIONAL_001",
+              "name": "Constitutional Provisions for Education",
+              "description": "Directive Principles, Fundamental Rights and Duties, equality of opportunity, and Article 21A (RTE 2002).",
+              "learning_objective": "Analyze the constitutional safeguards, Fundamental Rights, and Article 21A ensuring access to education.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Article 21A",
+                "Fundamental Rights",
+                "Directive Principles",
+                "Constitutional provisions"
+              ]
+            },
+            {
+              "concept_id": "PSE_POLICIES_AND_FRAMEWORKS_CONSTITUTIONAL_002",
+              "name": "Educational Commissions (1948-1966)",
+              "description": "Key recommendations of University Education Commission (1948-49), Secondary Education Commission (1952-53), and Kothari Commission (1964-66).",
+              "learning_objective": "Summarize major findings and recommendations of early Indian education commissions regarding equal opportunities.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Radhakrishnan Commission",
+                "Mudaliar Commission",
+                "Kothari Commission"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "PSE_POLICIES_AND_FRAMEWORKS_SCHEMES",
+          "name": "Policies, Schemes, and Curriculum Frameworks",
+          "description": "National policies, educational schemes (SSA, RMSA, IEDSS), and national curriculum frameworks.",
+          "concepts": [
+            {
+              "concept_id": "PSE_POLICIES_AND_FRAMEWORKS_SCHEMES_001",
+              "name": "Educational Schemes for Inclusion (IEDC, DPEP, SSA, RMSA, IEDSS)",
+              "description": "Objectives and implementations of IEDC (1974), PIED, DPEP, Sarva Shiksha Abhiyan (SSA), RMSA, and IEDSS.",
+              "learning_objective": "Trace the development of inclusive education schemes in India and their impact on access.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "IEDC",
+                "DPEP",
+                "SSA",
+                "RMSA",
+                "IEDSS"
+              ]
+            },
+            {
+              "concept_id": "PSE_POLICIES_AND_FRAMEWORKS_SCHEMES_002",
+              "name": "National Education Policies (NEP 1986, POA 1992, NEP 2020)",
+              "description": "Disability and inclusion highlights in NEP 1986, Plan of Action 1992, and NEP 2020.",
+              "learning_objective": "Compare the focus on special and inclusive education across NEP 1986, POA 1992, and NEP 2020.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "NEP 1986",
+                "POA 1992",
+                "NEP 2020",
+                "Inclusive Education in NEP"
+              ]
+            },
+            {
+              "concept_id": "PSE_POLICIES_AND_FRAMEWORKS_SCHEMES_003",
+              "name": "Curriculum Frameworks (NCF 2005, NCFFS 2022, NCFSE 2023)",
+              "description": "Inclusive guidelines in NCF 2005, NCF for Foundational Stage (2022), and NCF for School Education (2023).",
+              "learning_objective": "Identify inclusive pedagogical guidelines outlined in NCF 2005, NCFFS 2022, and NCFSE 2023.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "NCF 2005",
+                "NCFFS 2022",
+                "NCFSE 2023",
+                "Curriculum Framework"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "PSE_POLICIES_AND_FRAMEWORKS_ACTS",
+          "name": "Disability Rights, Acts, and Equality of Opportunity",
+          "description": "Legislative acts protecting disability rights and ensuring equal opportunity across all educational levels.",
+          "concepts": [
+            {
+              "concept_id": "PSE_POLICIES_AND_FRAMEWORKS_ACTS_001",
+              "name": "Disability Legislation: PWD Act 1995 & RPWD Act 2016",
+              "description": "Provisions, benchmark disability definitions, rights, and educational guarantees under PWD Act 1995 and RPWD Act 2016.",
+              "learning_objective": "Compare PWD Act 1995 and RPWD Act 2016, highlighting expanded disability categories and legal mandates.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "PWD Act 1995",
+                "RPWD Act 2016",
+                "benchmark disability",
+                "rights"
+              ]
+            },
+            {
+              "concept_id": "PSE_POLICIES_AND_FRAMEWORKS_ACTS_002",
+              "name": "RTE Act 2009, RCI Act 1992, and National Trust Act 1999",
+              "description": "Key rights under RTE Act 2009, role of Rehabilitation Council of India (RCI Act 1992), and National Trust Act 1999.",
+              "learning_objective": "Explain the mandates of RTE Act 2009, regulatory role of RCI, and provisions of the National Trust Act 1999.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "RTE Act 2009",
+                "RCI Act 1992",
+                "National Trust Act 1999",
+                "Mental Health Act 1987"
+              ]
+            },
+            {
+              "concept_id": "PSE_POLICIES_AND_FRAMEWORKS_ACTS_003",
+              "name": "National Policy for Persons with Disabilities (2006)",
+              "description": "Focus areas and principles of the National Policy for PwD 2006 for education, rehabilitation, and equal opportunity.",
+              "learning_objective": "Outline the policy framework and goals of the National Policy for PwD 2006.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "National Policy for PwD 2006",
+                "equal opportunity"
+              ]
+            },
+            {
+              "concept_id": "PSE_POLICIES_AND_FRAMEWORKS_ACTS_004",
+              "name": "Ensuring Equality of Educational Opportunity",
+              "description": "Strategies to promote equitable education across elementary, secondary, and higher education sectors.",
+              "learning_objective": "Formulate measures to ensure equal educational access across elementary, secondary, and tertiary education levels.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "equal opportunity",
+                "elementary education",
+                "secondary education",
+                "higher education"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "PSE_ACADEMIC_INSTRUCTION",
+      "name": "Inclusive Education - Academic Instructions and Practice",
+      "description": "Instructional strategies, adaptations, early intervention, teacher training, and departmental collaboration.",
+      "subtopics": [
+        {
+          "subtopic_id": "PSE_ACADEMIC_INSTRUCTION_PEDAGOGY",
+          "name": "Curricular Adaptations and Instructional Support",
+          "description": "Adaptations, accommodations, modifications, early intervention, and foundational literacy in inclusive settings.",
+          "concepts": [
+            {
+              "concept_id": "PSE_ACADEMIC_INSTRUCTION_PEDAGOGY_001",
+              "name": "Curricular Adaptations, Accommodations & Modifications",
+              "description": "Definitions and practical execution of curricular adaptations, instructional accommodations, and content modifications.",
+              "learning_objective": "Differentiate between adaptations, accommodations, and modifications and apply them to lesson planning.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "curricular adaptations",
+                "accommodations",
+                "modifications"
+              ]
+            },
+            {
+              "concept_id": "PSE_ACADEMIC_INSTRUCTION_PEDAGOGY_002",
+              "name": "Early Identification and Early Intervention",
+              "description": "Importance, tools, and processes of early screening, identification, and developmental intervention.",
+              "learning_objective": "Explain the significance and strategies of early identification and timely intervention for special needs children.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "early identification",
+                "early intervention",
+                "screening"
+              ]
+            },
+            {
+              "concept_id": "PSE_ACADEMIC_INSTRUCTION_PEDAGOGY_003",
+              "name": "Foundational Literacy for Inclusive Education",
+              "description": "Adapting foundational literacy and numeracy instruction to diverse special needs learners.",
+              "learning_objective": "Design inclusive strategies for developing foundational literacy in children with special needs.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "foundational literacy",
+                "FLN",
+                "inclusive pedagogy"
+              ]
+            },
+            {
+              "concept_id": "PSE_ACADEMIC_INSTRUCTION_PEDAGOGY_004",
+              "name": "Gender and Disability: Women and Girl Child",
+              "description": "Double marginalization, issues, and supportive interventions for women and girl children with disabilities.",
+              "learning_objective": "Analyze the intersectional challenges faced by girls and women with disabilities and suggest inclusive policies.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "girl child with disability",
+                "gender and disability",
+                "intersectional vulnerability"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "PSE_ACADEMIC_INSTRUCTION_COLLABORATION",
+          "name": "Collaborations, Teacher Preparation, and Support Systems",
+          "description": "Roles of special educators, general teachers, welfare departments, and professional training programs.",
+          "concepts": [
+            {
+              "concept_id": "PSE_ACADEMIC_INSTRUCTION_COLLABORATION_001",
+              "name": "Special Educators and General Education Teachers",
+              "description": "Collaborative relationships, role division, and team teaching between general and special education teachers.",
+              "learning_objective": "Detail the complementary roles and collaborative methods between general class teachers and special educators.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "special educator",
+                "general teacher",
+                "collaboration"
+              ]
+            },
+            {
+              "concept_id": "PSE_ACADEMIC_INSTRUCTION_COLLABORATION_002",
+              "name": "Teacher Education Programs in Special Education",
+              "description": "Structure, training, pre-service, and in-service professional development programs in special education.",
+              "learning_objective": "Evaluate teacher training frameworks for special and inclusive education in India.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "teacher education",
+                "RCI training",
+                "in-service training"
+              ]
+            },
+            {
+              "concept_id": "PSE_ACADEMIC_INSTRUCTION_COLLABORATION_003",
+              "name": "Inter-Departmental Collaboration and Social Welfare",
+              "description": "Coordination between the Social Welfare Department, Department of Education, health services, and voluntary agencies.",
+              "learning_objective": "Describe how multi-departmental convergence enhances resource delivery for inclusive education.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Social Welfare Department",
+                "Department of Education",
+                "inter-agency coordination"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "blueprint_id": "8867e059-d568-4bde-8470-12a9bdb00c10",
+  "exam": "DSC",
+  "subject": "Perspectives  Special Ed",
+  "total_questions": 10,
+  "topic_distribution": {
+    "Philosophical Foundations of Education": 2,
+    "Agencies, Modes, and Contexts of Education": 2,
+    "Perspectives in Special Education - Ancient to Contemporary": 2,
+    "Educational Foundations in India - Policies & Frameworks": 3,
+    "Inclusive Education - Academic Instructions and Practice": 1
+  },
+  "difficulty_distribution": {
+    "easy": 2,
+    "medium": 6,
+    "hard": 2
+  },
+  "question_type_distribution": {
+    "analytical": 3,
+    "application": 3,
+    "problem_solving": 2,
+    "conceptual": 2
+  }
+}

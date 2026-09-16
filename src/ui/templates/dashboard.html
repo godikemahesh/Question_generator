@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExamForge AI — Question Studio & Dispatcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body class="dark-theme">
+
+  <!-- ================= AUTH OVERLAY ================= -->
+  <div id="login-overlay" class="login-overlay">
+    <div class="login-card glass-panel">
+      <div class="brand-badge">
+        <span class="pulse-dot"></span> EXAMFORGE STUDIO
+      </div>
+      <h2>Admin Authentication</h2>
+      <p class="subtitle">Enter your admin credentials to access the question generation control plane.</p>
+
+      <form id="login-form">
+        <div class="input-group">
+          <label for="admin-email">Admin Email</label>
+          <input type="email" id="admin-email" placeholder="admin@example.com" required autocomplete="username">
+        </div>
+        <div class="input-group">
+          <label for="admin-password">Password</label>
+          <input type="password" id="admin-password" placeholder="••••••••" required autocomplete="current-password">
+        </div>
+        <div id="login-error" class="error-msg hidden"></div>
+        <button type="submit" class="btn btn-primary btn-block">Authenticate & Access Dashboard</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MAIN APP WRAPPER ================= -->
+  <div id="app-wrapper" class="app-wrapper">
+
+    <!-- TOP HEADER NAVBAR -->
+    <header class="navbar glass-panel">
+      <div class="nav-left">
+        <div class="logo">
+          <div class="logo-icon">EF</div>
+          <div class="logo-text">
+            <span class="logo-title">ExamForge AI</span>
+            <span class="logo-sub">Question Studio & Webhook Ingest</span>
+          </div>
+        </div>
+
+        <div class="worker-status-badge" id="worker-badge">
+          <span class="status-indicator"></span>
+          <span id="worker-status-text">Worker: Idle</span>
+        </div>
+      </div>
+
+      <div class="nav-center">
+        <!-- Master Worker Controls -->
+        <div class="master-controls">
+          <button id="btn-start" class="btn btn-sm btn-success" title="Start balanced generation">
+            <span class="btn-icon">▶</span> Start All
+          </button>
+          <button id="btn-pause" class="btn btn-sm btn-warning" title="Pause generation">
+            <span class="btn-icon">⏸</span> Pause
+          </button>
+          <button id="btn-stop" class="btn btn-sm btn-danger" title="Stop worker">
+            <span class="btn-icon">⏹</span> Stop
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <!-- LLM Priority Pill -->
+        <div class="provider-pill" title="Automatic 3-Tier LLM Fallback Cascade">
+          <span class="prov-tag gemini active">1. Gemini</span>
+          <span class="prov-arrow">→</span>
+          <span class="prov-tag openrouter">2. OpenRouter</span>
+          <span class="prov-arrow">→</span>
+          <span class="prov-tag groq">3. Groq</span>
+        </div>
+
+        <!-- Free Web Search Cascade Pill -->
+        <div class="provider-pill search-pill" title="Free Web Search Cascade (~3,428 basic searches/mo)">
+          <span class="prov-tag tavily active">🔍 Tavily</span>
+          <span class="prov-arrow">→</span>
+          <span class="prov-tag brave">Brave</span>
+          <span class="prov-arrow">→</span>
+          <span class="prov-tag exa">Exa</span>
+        </div>
+
+        <button id="btn-logout" class="btn btn-ghost btn-sm" title="Log Out">
+          <span>maheshgodike17</span> ⎋
+        </button>
+      </div>
+    </header>
+
+    <!-- TAB BAR -->
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="tab-matrix">
+        <span class="tab-icon">🎛️</span> Subject Control Matrix
+      </button>
+      <button class="tab-btn" data-tab="tab-syllabus">
+        <span class="tab-icon">📚</span> Syllabus Hub & Auto-Parser
+      </button>
+      <button class="tab-btn" data-tab="tab-dispatches">
+        <span class="tab-icon">📋</span> Dispatch History & Audit (100 Qs)
+      </button>
+      <button class="tab-btn" data-tab="tab-webhook">
+        <span class="tab-icon">🌐</span> Webhook & Endpoint Config
+      </button>
+    </nav>
+
+    <!-- CONTENT TABS -->
+    <main class="main-content">
+
+      <!-- ================= TAB 1: SUBJECT CONTROL MATRIX ================= -->
+      <section id="tab-matrix" class="tab-pane active">
+        <div class="layout-grid">
+          
+          <!-- LEFT COLUMN: SUBJECT CARDS -->
+          <div class="matrix-left">
+            <div class="section-header">
+              <div>
+                <h2>Active Subject Toggles & Balanced Generation</h2>
+                <p class="section-desc">Toggle subjects to generate in a fair round-robin loop. Once a subject reaches 100 verified questions, it automatically dispatches to ExamForge.</p>
+              </div>
+              <button id="btn-refresh-subjects" class="btn btn-ghost btn-sm">↻ Refresh</button>
+            </div>
+
+            <div id="subjects-grid" class="subjects-grid">
+              <!-- Rendered dynamically by dashboard.js -->
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: LIVE WORKER MONITOR & EVENT STREAM -->
+          <div class="matrix-right">
+            <div class="glass-panel stream-panel">
+              <div class="stream-header">
+                <h3>Live Event Stream</h3>
+                <span class="live-tag"><span class="pulse-dot green"></span> Live</span>
+              </div>
+              <div class="stream-metrics">
+                <div class="metric-box">
+                  <span class="metric-label">Current Subject</span>
+                  <span id="metric-subject" class="metric-val">—</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-label">Current Topic</span>
+                  <span id="metric-topic" class="metric-val">—</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-label">Last Action</span>
+                  <span id="metric-action" class="metric-val">Idle</span>
+                </div>
+              </div>
+
+              <div class="log-container">
+                <div id="log-list" class="log-list">
+                  <div class="log-entry">System ready. Toggle subjects to start generating.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= TAB 2: SYLLABUS HUB & AUTO-PARSER ================= -->
+      <section id="tab-syllabus" class="tab-pane">
+        <div class="section-header">
+          <div>
+            <h2>Syllabus Hub & Visual Topic Tree</h2>
+            <p class="section-desc">Upload or paste syllabus text. The AI auto-extracts topics, concepts, and weightages. Customize weightage percentages directly without editing any local files.</p>
+          </div>
+        </div>
+
+        <div class="syllabus-grid">
+          <!-- UPLOAD / INPUT PANEL -->
+          <div class="glass-panel syllabus-input-card">
+            <h3>1. Provide Syllabus Content</h3>
+            <!-- Subject Selection with OR between Dropdown and New Subject Input -->
+            <div class="subject-choice-row">
+              <div class="input-group flex-1">
+                <label for="syl-subject-select">Choose Existing Subject</label>
+                <select id="syl-subject-select" class="form-select"></select>
+              </div>
+
+              <div class="or-badge-col">
+                <span class="or-badge">OR</span>
+              </div>
+
+              <div class="input-group flex-1">
+                <label for="syl-new-subject">Enter New Subject Name</label>
+                <input type="text" id="syl-new-subject" placeholder="e.g. Reasoning, History, Physics...">
+              </div>
+            </div>
+
+            <!-- Exam Code and Syllabus Mode (Replace vs Update) -->
+            <div class="form-row">
+              <div class="input-group">
+                <label for="syl-exam-code">Exam Code</label>
+                <input type="text" id="syl-exam-code" value="RRB" placeholder="e.g. RRB, DSC, TET">
+              </div>
+
+              <div class="input-group">
+                <label>Syllabus Action Mode</label>
+                <div class="mode-toggle-group">
+                  <label class="radio-label" title="Completely overwrite the subject syllabus with this new content">
+                    <input type="radio" name="syl_mode" id="syl-mode-replace" value="replace" checked>
+                    <span>🔁 Replace Entire</span>
+                  </label>
+                  <label class="radio-label" title="Merge new topics/concepts into the existing syllabus without losing previous topics">
+                    <input type="radio" name="syl_mode" id="syl-mode-update" value="update">
+                    <span>➕ Update / Merge</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="syl-file-input">Upload Syllabus File (.txt, .pdf, .docx)</label>
+              <input type="file" id="syl-file-input" accept=".txt,.pdf,.docx" class="form-file">
+            </div>
+
+            <div class="input-group">
+              <label for="syl-text-input">Or Paste Syllabus Text Directly</label>
+              <textarea id="syl-text-input" rows="8" placeholder="Paste full or partial subject syllabus here..."></textarea>
+            </div>
+
+            <button id="btn-parse-syllabus" class="btn btn-primary btn-block">
+              ✨ Auto-Parse with AI & Build Tree
+            </button>
+          </div>
+
+          <!-- TOPIC TREE & WEIGHTAGE CUSTOMIZER -->
+          <div class="glass-panel syllabus-tree-card">
+            <div class="tree-header">
+              <h3>2. Visual Topic Tree & Weightage Customizer</h3>
+              <button id="btn-save-tree" class="btn btn-success btn-sm">💾 Save Blueprint Changes</button>
+            </div>
+            <p class="sub-hint">Adjust the weightage slider for each topic to control question proportion in generated mock tests.</p>
+
+            <div id="tree-container" class="tree-container">
+              <div class="empty-state">No parsed syllabus displayed. Select a subject and click "Auto-Parse" or upload a file.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB 3: DISPATCH HISTORY & AUDIT ================= -->
+      <section id="tab-dispatches" class="tab-pane">
+        <div class="section-header">
+          <div>
+            <h2>ExamForge 100-Question Ingestion Logs</h2>
+            <p class="section-desc">Audit history of every batch delivered to ExamForge. Inspect full payload JSON, download copies, or trigger re-sends.</p>
+          </div>
+          <button id="btn-refresh-dispatches" class="btn btn-ghost btn-sm">↻ Refresh Logs</button>
+        </div>
+
+        <div class="glass-panel table-panel">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Batch Number</th>
+                <th>Exam & Subject</th>
+                <th>Topic</th>
+                <th>Questions</th>
+                <th>HTTP Status</th>
+                <th>Delivered At</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="dispatches-tbody">
+              <tr>
+                <td colspan="7" class="text-center">Loading dispatch history...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ================= TAB 4: WEBHOOK & SETTINGS ================= -->
+      <section id="tab-webhook" class="tab-pane">
+        <div class="section-header">
+          <div>
+            <h2>Mock Test Endpoint & Provider Settings</h2>
+            <p class="section-desc">Switch between Localhost and Production endpoints, configure API keys, adjust batch size threshold, and verify connections.</p>
+          </div>
+        </div>
+
+        <div class="settings-grid">
+          <!-- EXAMFORGE ENDPOINT SETTINGS -->
+          <div class="glass-panel settings-card">
+            <h3>ExamForge Ingest Webhook</h3>
+            
+            <div class="endpoint-switcher">
+              <label class="radio-label">
+                <input type="radio" name="endpoint_env" id="env-prod" value="prod" checked>
+                <span>Production (Vercel)</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="endpoint_env" id="env-local" value="local">
+                <span>Localhost (port 3000)</span>
+              </label>
+            </div>
+
+            <div class="input-group">
+              <label for="cfg-endpoint-url">Target Ingest URL</label>
+              <input type="text" id="cfg-endpoint-url" value="https://examforge-pink.vercel.app/api/questions/ai-ingest">
+            </div>
+
+            <div class="input-group">
+              <label for="cfg-api-key">Authentication Header (x-api-key)</label>
+              <input type="text" id="cfg-api-key" value="ef_ai_ingest_9a7d3f28e6c41b80d52a7e9140f">
+            </div>
+
+            <div class="form-row">
+              <div class="input-group">
+                <label for="cfg-batch-size">Dispatch Threshold (Questions)</label>
+                <input type="number" id="cfg-batch-size" value="100" min="10" max="200">
+              </div>
+              <div class="input-group">
+                <label for="cfg-auto-dispatch">Dispatch Mode</label>
+                <select id="cfg-auto-dispatch" class="form-select">
+                  <option value="true">Automatic (Send on 100 Qs)</option>
+                  <option value="false">Review First (Awaiting Manual Send)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="btn-group-row">
+              <button id="btn-test-webhook" class="btn btn-secondary">⚡ Test Endpoint Connection</button>
+              <span id="test-webhook-result" class="test-result-text"></span>
+            </div>
+          </div>
+
+          <!-- MULTI-PROVIDER LLM & FREE SEARCH CASCADE -->
+          <div class="glass-panel settings-card">
+            <h3>LLM Providers & Free Web Search Cascade</h3>
+            <p class="sub-hint">Inference cascade: 1st Gemini → 2nd OpenRouter → 3rd Groq.</p>
+
+            <div class="input-group">
+              <label for="cfg-gemini-key">1. Google Gemini API Key</label>
+              <input type="password" id="cfg-gemini-key" placeholder="AIzaSy...">
+            </div>
+
+            <div class="input-group">
+              <label for="cfg-openrouter-key">2. OpenRouter API Key</label>
+              <input type="password" id="cfg-openrouter-key" placeholder="sk-or-v1-...">
+            </div>
+
+            <div class="input-group">
+              <label for="cfg-groq-key">3. Groq API Key (Ultra-fast Llama 3.3 70B Fallback)</label>
+              <input type="password" id="cfg-groq-key" placeholder="gsk_...">
+            </div>
+
+            <!-- DEDICATED FREE SEARCH PROVIDERS CASCADE -->
+            <div class="search-provider-section" style="margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border-subtle);">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                <h4 style="font-size: 13.5px; font-weight: 700; color: var(--accent-cyan); letter-spacing: -0.2px;">🌐 Free Web Search Cascade (~3,428 Basic Searches/mo)</h4>
+                <span class="live-tag" style="font-size: 10px; background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">3 Free Tiers</span>
+              </div>
+              <p class="sub-hint" style="margin-bottom: 14px;">Real-time ground-truth facts for GK & Current Affairs. Cascades: 1st Tavily → 2nd Brave → 3rd Exa.</p>
+
+              <div class="input-group">
+                <label for="cfg-tavily-key">1. Tavily API Key <span style="font-size: 11px; color: var(--text-muted); font-weight: normal;">(1,000 free credits/month)</span></label>
+                <input type="password" id="cfg-tavily-key" placeholder="tvly-...">
+              </div>
+
+              <div class="input-group">
+                <label for="cfg-brave-key">2. Brave Search API Key <span style="font-size: 11px; color: var(--text-muted); font-weight: normal;">($5/month free allowance ~1,000 searches)</span></label>
+                <input type="password" id="cfg-brave-key" placeholder="BSA...">
+              </div>
+
+              <div class="input-group">
+                <label for="cfg-exa-key">3. Exa API Key <span style="font-size: 11px; color: var(--text-muted); font-weight: normal;">($10/month free allowance ~1,428 searches)</span></label>
+                <input type="password" id="cfg-exa-key" placeholder="exa-...">
+              </div>
+
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" id="cfg-search-enabled" checked>
+                  <span>Enable Real-time Web Search Cascade for General Knowledge & Current Affairs</span>
+                </label>
+              </div>
+            </div>
+
+            <button id="btn-save-config" class="btn btn-primary btn-block" style="margin-top: 14px;">Save Global Configuration</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- ================= MODAL: VIEW JSON PAYLOAD ================= -->
+  <div id="json-modal" class="modal-overlay hidden">
+    <div class="modal-card glass-panel">
+      <div class="modal-header">
+        <h3 id="modal-title">Batch Payload JSON</h3>
+        <button id="btn-close-modal" class="btn-close">×</button>
+      </div>
+      <div class="modal-body">
+        <pre><code id="modal-code"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-download-json" class="btn btn-secondary">⬇ Download JSON</button>
+        <button id="btn-modal-dismiss" class="btn btn-primary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "blueprint_id": "3c36ea7b-dd65-413c-aa8d-0ea1553f750b",
+  "exam": "DSC",
+  "subject": "Science",
+  "total_questions": 40,
+  "topic_distribution": {
+    "Living World": 8,
+    "Life Processes": 6,
+    "Matter and Materials": 6,
+    "Physical Phenomena": 6,
+    "Transportation and Communication": 3,
+    "Professions, Services, and Governance": 2,
+    "Our Environment": 4,
+    "Science Methodology": 5
+  },
+  "difficulty_distribution": {
+    "easy": 8,
+    "medium": 24,
+    "hard": 8
+  },
+  "question_type_distribution": {
+    "analytical": 12,
+    "application": 12,
+    "problem_solving": 8,
+    "conceptual": 8
+  }
+}

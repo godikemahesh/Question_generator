@@ -1,0 +1,1027 @@
+{
+  "subject_id": "sped_methodology",
+  "name": "Sped Methodology",
+  "source_file": "C:\\Users\\vijen\\Downloads\\question_gen\\syllabus\\sped_methodology.txt",
+  "description": "Methodology in Special Education and Inclusive Education covering curriculum design, adaptation, teaching strategies, assessment, and specialized interventions across diverse disability categories for the DSC exam.",
+  "topics": [
+    {
+      "topic_id": "SPED_ID",
+      "name": "Methodology for Intellectual Disability (ID)",
+      "description": "Curriculum development, adaptations, instructional strategies, and behavioral interventions for children with Intellectual Disability.",
+      "subtopics": [
+        {
+          "subtopic_id": "SPED_ID_CURR",
+          "name": "Curriculum Design and Development for ID",
+          "description": "Foundational concepts, principles, types, and levels of curriculum planning for students with Intellectual Disability.",
+          "concepts": [
+            {
+              "concept_id": "SPED_ID_CURR_001",
+              "name": "Curriculum Concepts and Principles for ID",
+              "description": "Meaning, definition, core concepts, and fundamental principles of curriculum design tailored for children with ID.",
+              "learning_objective": "Understand the core principles and conceptual framework of designing curriculum for students with ID.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "curriculum principles",
+                "definition of curriculum",
+                "intellectual disability"
+              ]
+            },
+            {
+              "concept_id": "SPED_ID_CURR_002",
+              "name": "Types and Approaches of Curriculum Designing",
+              "description": "Exploration of standard curriculum design approaches and types suitable for special education.",
+              "learning_objective": "Identify and differentiate various approaches and types of curriculum design used in special education.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "curriculum approaches",
+                "designing types",
+                "special education curriculum"
+              ]
+            },
+            {
+              "concept_id": "SPED_ID_CURR_003",
+              "name": "Curriculum across Educational Levels",
+              "description": "Curriculum structure at Secondary, Pre-vocational, and Vocational levels for learners with ID.",
+              "learning_objective": "Analyze curriculum structure and transition planning from secondary to vocational training for ID.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "pre-vocational level",
+                "vocational curriculum",
+                "secondary transition"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SPED_ID_ADAPT",
+          "name": "Adaptation, Teaching Strategies, and Interventions for ID",
+          "description": "Curricular adaptation techniques, multisensory teaching strategies, TLM preparation, and behavioral management.",
+          "concepts": [
+            {
+              "concept_id": "SPED_ID_ADAPT_001",
+              "name": "Curricular, Academic, and Co-curricular Adaptations",
+              "description": "Needs and methods for adaptation, accommodation, and modification in pre-academic, academic, and co-curricular subjects.",
+              "learning_objective": "Apply accommodation and modification techniques across school subjects and activities for students with ID.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "adaptation",
+                "accommodation",
+                "modification",
+                "pre-academic"
+              ]
+            },
+            {
+              "concept_id": "SPED_ID_ADAPT_002",
+              "name": "Teaching Strategies, TLM, and Multisensory Approaches",
+              "description": "Methodologies, teaching-learning materials (TLM), and multisensory approaches for teaching concepts to ID students.",
+              "learning_objective": "Select and utilize appropriate teaching strategies and multisensory TLM for learners with ID.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "multisensory approach",
+                "TLM",
+                "teaching strategies"
+              ]
+            },
+            {
+              "concept_id": "SPED_ID_ADAPT_003",
+              "name": "Intervention for Maladaptive Behaviour",
+              "description": "Assessment and behavioral intervention strategies to handle maladaptive behaviors in the classroom.",
+              "learning_objective": "Plan and execute behavioral intervention strategies to address maladaptive behaviors in ID.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "maladaptive behavior",
+                "behavior intervention",
+                "classroom management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SPED_HI",
+      "name": "Methodology for Hearing Impairment (HI)",
+      "description": "Curriculum adaptation, literacy development, auditory training, speech interventions, and technology for children with Hearing Impairment.",
+      "subtopics": [
+        {
+          "subtopic_id": "SPED_HI_CURR",
+          "name": "Curriculum Designing, Adaptation, and Evaluation for HI",
+          "description": "Models, steps, adaptation processes, and evaluation frameworks for students with HI.",
+          "concepts": [
+            {
+              "concept_id": "SPED_HI_CURR_001",
+              "name": "HI Curriculum Models and Design Steps",
+              "description": "Concepts, types, models, and systematic steps for designing curriculum tailored to HI needs.",
+              "learning_objective": "Explain the curriculum design models and steps required for hearing impaired learners.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "HI curriculum",
+                "curriculum models",
+                "design steps"
+              ]
+            },
+            {
+              "concept_id": "SPED_HI_CURR_002",
+              "name": "Curricular Adaptation Process for HI",
+              "description": "Principles, need assessment, and process of adapting content, TLM, instruction, and examinations.",
+              "learning_objective": "Execute need assessment and adapt content, instructional materials, and exams for HI students.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "need assessment",
+                "content adaptation",
+                "examination accommodation"
+              ]
+            },
+            {
+              "concept_id": "SPED_HI_CURR_003",
+              "name": "Curricular Evaluation for HI",
+              "description": "Factors, methods, and evaluation tools used to evaluate curricular progress for HI learners.",
+              "learning_objective": "Evaluate student learning outcomes in HI using specialized tools and methods.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "curricular evaluation",
+                "evaluation tools",
+                "HI assessment"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SPED_HI_COMM",
+          "name": "Literacy, Communication, and Assistive Technology for HI",
+          "description": "Intervention strategies for language, speech, auditory training, AVT, and technology implementation.",
+          "concepts": [
+            {
+              "concept_id": "SPED_HI_COMM_001",
+              "name": "Literacy Skills Development: Reading and Writing",
+              "description": "Strategies to build reading and writing literacy in children with hearing loss.",
+              "learning_objective": "Apply specialized methods to foster reading and writing skills in HI students.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "literacy skills",
+                "reading strategy",
+                "written language"
+              ]
+            },
+            {
+              "concept_id": "SPED_HI_COMM_002",
+              "name": "Early Intervention, Auditory Training, and AVT",
+              "description": "Early detection strategies, Auditory Verbal Therapy (AVT), and auditory training approaches.",
+              "learning_objective": "Understand early intervention techniques, AVT, and auditory training practices.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "early intervention",
+                "AVT",
+                "auditory training"
+              ]
+            },
+            {
+              "concept_id": "SPED_HI_COMM_003",
+              "name": "Speech and Communication Teaching Strategies",
+              "description": "Speech intervention techniques and language teaching strategies tailored for hearing impairment.",
+              "learning_objective": "Implement effective speech and language development interventions in HI education.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "speech intervention",
+                "language teaching",
+                "communication strategies"
+              ]
+            },
+            {
+              "concept_id": "SPED_HI_COMM_004",
+              "name": "Assistive Technology for Speech and Education in HI",
+              "description": "Technological devices and software facilitating speech management and accessible education.",
+              "learning_objective": "Integrate appropriate educational and speech technology to support HI learners.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "speech technology",
+                "assistive technology",
+                "educational ICT"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SPED_VI",
+      "name": "Methodology for Visual Impairment (VI)",
+      "description": "Functional academics, Expanded Core Curriculum, Braille instruction, orientation & mobility, and adaptive devices for children with Visual Impairment.",
+      "subtopics": [
+        {
+          "subtopic_id": "SPED_VI_CURR",
+          "name": "Curriculum Planning, IEP, and Pedagogical Strategies for VI",
+          "description": "Lesson planning, IEP writing, Expanded Core Curriculum, and inclusive pedagogical strategies.",
+          "concepts": [
+            {
+              "concept_id": "SPED_VI_CURR_001",
+              "name": "Functional Academics and Independent Living Skills",
+              "description": "Curriculum approaches to teach functional academic concepts and essential independent living skills.",
+              "learning_objective": "Design instruction for functional academics and independent daily living skills for VI.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "functional academics",
+                "independent living skills",
+                "daily living"
+              ]
+            },
+            {
+              "concept_id": "SPED_VI_CURR_002",
+              "name": "Expanded Core Curriculum (ECC) and IEP Writing",
+              "description": "Components of Expanded Core Curriculum and formulation of Individualized Education Programs for VI.",
+              "learning_objective": "Draft IEPs and implement Expanded Core Curriculum for students with visual impairment.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "ECC",
+                "Expanded Core Curriculum",
+                "IEP"
+              ]
+            },
+            {
+              "concept_id": "SPED_VI_CURR_003",
+              "name": "Pedagogical Strategies and Multisensory Approaches",
+              "description": "Cooperative learning, peer tutoring, reflective teaching, and tactile/multisensory instruction for VI.",
+              "learning_objective": "Employ cooperative and multisensory pedagogical strategies in teaching visually impaired students.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "cooperative learning",
+                "peer tutoring",
+                "multisensory teaching"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SPED_VI_SKILLS",
+          "name": "Specific Skills, Braille, Mobility, and Assistive Devices",
+          "description": "Teaching Braille, Orientation & Mobility, sensory training, adaptive physical education, and interventions.",
+          "concepts": [
+            {
+              "concept_id": "SPED_VI_SKILLS_001",
+              "name": "Teaching Braille, Sign Language, and Concept Formation",
+              "description": "Techniques for concept formation, teaching Braille (devices/types), and sign language integration.",
+              "learning_objective": "Utilize Braille devices and teaching methods to facilitate literacy and concept formation.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Braille",
+                "concept formation",
+                "sign language"
+              ]
+            },
+            {
+              "concept_id": "SPED_VI_SKILLS_002",
+              "name": "Orientation & Mobility, Sensory Training, and Assistive Devices",
+              "description": "Methods for teaching orientation and mobility (O&M), sensory training, and training on latest assistive devices.",
+              "learning_objective": "Instruct VI students in orientation, mobility, sensory utilization, and assistive technology.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Orientation and Mobility",
+                "O&M",
+                "sensory training",
+                "assistive devices"
+              ]
+            },
+            {
+              "concept_id": "SPED_VI_SKILLS_003",
+              "name": "Special Educator Roles, Interventions, and Physical Education",
+              "description": "Role of special educators in mediated learning, adaptive TLM, interventions for lately blinded students, and adapted physical education.",
+              "learning_objective": "Prepare adaptive TLM, design interventions for late blindness, and adapt physical education activities.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "lately blinded",
+                "adaptive TLM",
+                "adapted physical education",
+                "mediated learning"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SPED_SLD",
+      "name": "Methodology for Specific Learning Disability (SLD)",
+      "description": "Instructional planning, differentiation, specialized academic interventions, processing deficit supports, and evaluation tools for children with SLD.",
+      "subtopics": [
+        {
+          "subtopic_id": "SPED_SLD_CURR",
+          "name": "Curriculum Design, Planning, and Assessment for SLD",
+          "description": "Curriculum hierarchies, types of curriculum, accommodations, and rubric-based assessment.",
+          "concepts": [
+            {
+              "concept_id": "SPED_SLD_CURR_001",
+              "name": "Types of Curriculum and Hierarchies in SLD",
+              "description": "Principles of core, collateral, support, and hidden curriculum, alongside instructional hierarchies.",
+              "learning_objective": "Differentiate between core, collateral, support, and hidden curriculum types in SLD education.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "core curriculum",
+                "hidden curriculum",
+                "support curriculum"
+              ]
+            },
+            {
+              "concept_id": "SPED_SLD_CURR_002",
+              "name": "Instructional Planning and Differentiation Strategies",
+              "description": "Adapting, modifying, accommodating instruction, and designing classroom differentiation strategies.",
+              "learning_objective": "Plan differentiated instruction and apply accommodations for SLD students in inclusive classrooms.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "instructional planning",
+                "differentiation",
+                "classroom inclusion"
+              ]
+            },
+            {
+              "concept_id": "SPED_SLD_CURR_003",
+              "name": "Assessment Tools and Evaluation Techniques for SLD",
+              "description": "Evaluation tools including rubrics, grading adaptations, and specialized marking schemes.",
+              "learning_objective": "Construct rubrics and assessment procedures appropriate for evaluating students with SLD.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "rubrics",
+                "grading schemes",
+                "evaluation tools"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SPED_SLD_INTERV",
+          "name": "Academic Interventions and Technology for SLD",
+          "description": "Interventions in reading, writing, mathematics, processing deficits, life skills, and ICT engagement.",
+          "concepts": [
+            {
+              "concept_id": "SPED_SLD_INTERV_001",
+              "name": "Strategies for Reading, Word Recognition, and Fluency",
+              "description": "Methods to improve word recognition, reading fluency, and reading comprehension across subjects.",
+              "learning_objective": "Implement evidence-based strategies to remediate reading, fluency, and comprehension difficulties.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "word recognition",
+                "reading fluency",
+                "reading comprehension"
+              ]
+            },
+            {
+              "concept_id": "SPED_SLD_INTERV_002",
+              "name": "Interventions for Handwriting, Spelling, and Written Expression",
+              "description": "Remediation strategies for graphomotor skills, dysgraphia, spelling patterns, and written composition.",
+              "learning_objective": "Apply targeted instructional interventions for handwriting, spelling, and written expression.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "handwriting",
+                "spelling",
+                "written expression"
+              ]
+            },
+            {
+              "concept_id": "SPED_SLD_INTERV_003",
+              "name": "Interventions for Mathematics, Processing Deficits, and Life Skills",
+              "description": "Educational techniques addressing dyscalculia, cognitive processing deficits, life skills, and ICT engagement tools.",
+              "learning_objective": "Design interventions for math deficits, cognitive processing issues, and real-world life skills.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "mathematics interventions",
+                "processing deficit",
+                "life skills",
+                "classroom technology"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SPED_ASD",
+      "name": "Methodology for Autism Spectrum Disorder (ASD)",
+      "description": "Curriculum adaptations, instructional methods, multi-domain evaluation approaches, and co-curricular modifications for children with Autism Spectrum Disorder.",
+      "subtopics": [
+        {
+          "subtopic_id": "SPED_ASD_CURR",
+          "name": "Curriculum Adaptation and Modification for ASD",
+          "description": "Curriculum development orientation, stages of adaptation, accommodations, and co-curricular focus.",
+          "concepts": [
+            {
+              "concept_id": "SPED_ASD_CURR_001",
+              "name": "Curriculum Development and Focus for CwASD",
+              "description": "Orientation to curriculum development principles and key focal areas for children with ASD.",
+              "learning_objective": "Identify key curricular priority areas and design considerations for children on the autism spectrum.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "CwASD",
+                "curriculum development",
+                "autistic learners"
+              ]
+            },
+            {
+              "concept_id": "SPED_ASD_CURR_002",
+              "name": "Stages and Types of Adaptations for ASD",
+              "description": "Understanding stages of adaptation, structural accommodations, and curricular modifications.",
+              "learning_objective": "Apply multi-stage accommodations and modifications tailored to ASD learner characteristics.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "stages of adaptation",
+                "accommodations",
+                "modifications"
+              ]
+            },
+            {
+              "concept_id": "SPED_ASD_CURR_003",
+              "name": "Co-curricular Activities and Learning Material Accommodation",
+              "description": "Adapting co-curricular activities, structured environment, and learning materials for ASD.",
+              "learning_objective": "Modify learning materials and co-curricular settings to ensure active ASD participation.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "co-curricular accommodation",
+                "structured materials",
+                "learning environment"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SPED_ASD_EVAL",
+          "name": "Teaching Methods and Multi-Disciplinary Evaluation Approaches for ASD",
+          "description": "Pedagogical methods and behavioral, developmental, cognitive, and social assessment approaches.",
+          "concepts": [
+            {
+              "concept_id": "SPED_ASD_EVAL_001",
+              "name": "Teaching Methods and Instructional Strategies for ASD",
+              "description": "Evidence-based teaching approaches and structured instructional techniques for autistic learners.",
+              "learning_objective": "Utilize structured teaching strategies and visual supports effectively for ASD students.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "teaching strategies",
+                "structured teaching",
+                "ASD instruction"
+              ]
+            },
+            {
+              "concept_id": "SPED_ASD_EVAL_002",
+              "name": "Evaluation Approaches for Children with ASD",
+              "description": "Evaluation of ASD progress using Behavioral, Developmental, Cognitive, and Social approaches.",
+              "learning_objective": "Compare and apply behavioral, developmental, cognitive, and social evaluation methods.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "behavioral approach",
+                "developmental approach",
+                "cognitive approach",
+                "social approach"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SPED_CP",
+      "name": "Methodology for Cerebral Palsy (CP)",
+      "description": "Environmental positioning, specialized early childhood models, subject adaptation, motor learning, and Universal Design for Learning for Cerebral Palsy.",
+      "subtopics": [
+        {
+          "subtopic_id": "SPED_CP_ENV",
+          "name": "Principles of Teaching, Physical Access, and Classroom Environment",
+          "description": "Reinforcement principles, space/seating/positioning, AAC storage, arousal schedules, and physical considerations.",
+          "concepts": [
+            {
+              "concept_id": "SPED_CP_ENV_001",
+              "name": "Teaching Principles, Reinforcement, and TLM Selection",
+              "description": "Core teaching principles, reinforcement systems, and selection/use of specialized TLM for CP.",
+              "learning_objective": "Apply teaching and reinforcement principles while selecting physical TLM for learners with CP.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "principles of reinforcement",
+                "TLM selection",
+                "cerebral palsy"
+              ]
+            },
+            {
+              "concept_id": "SPED_CP_ENV_002",
+              "name": "Physical Access, Seating, Positioning, and Arousal Schedules",
+              "description": "Managing classroom space, seating, positioning, wheelchair/AAC device storage, and arousal-level schedules.",
+              "learning_objective": "Arrange classroom environments, seating/positioning setups, and schedules tailored to CP needs.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "seating and positioning",
+                "AAC storage",
+                "arousal levels",
+                "wheelchair access"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SPED_CP_STRAT",
+          "name": "Specialized Models, Academic Modifications, and Interventions for CP",
+          "description": "Evaluation frameworks (JASPER, LEAP, ESDM), subject modifications, UDL, social skills, and therapy-aligned strategies.",
+          "concepts": [
+            {
+              "concept_id": "SPED_CP_STRAT_001",
+              "name": "Specialized Early Childhood and Evaluation Models",
+              "description": "Evaluation and intervention frameworks including JASPER, LEAP, and Early Start Denver Model (ESDM).",
+              "learning_objective": "Explain early intervention and evaluation models like JASPER, LEAP, and ESDM for children with CP/developmental delays.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "JASPER",
+                "LEAP",
+                "ESDM",
+                "early evaluation"
+              ]
+            },
+            {
+              "concept_id": "SPED_CP_STRAT_002",
+              "name": "Academic Adaptation, Multimedia, and Proficiency Standards",
+              "description": "Adapting literacy, numeracy, functional academics, multimedia, and modified proficiency standards/exemptions.",
+              "learning_objective": "Modify literacy/numeracy instruction and adjust proficiency standards for CP learners.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "functional academics",
+                "multimedia",
+                "proficiency standards",
+                "exemptions"
+              ]
+            },
+            {
+              "concept_id": "SPED_CP_STRAT_003",
+              "name": "Social Skills, Specialized Approaches, and Inclusive UDL",
+              "description": "Promoting social skills (Art, Social Stories, Comic strips, Peer-Mediated), Conductive Education, Motor Learning, RTI, and UDL in inclusive elementary classes.",
+              "learning_objective": "Implement social skill activities, Conductive Education, RTI, and UDL in regular classrooms for CP inclusion.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Conductive Education",
+                "UDL",
+                "Social stories",
+                "Response to Intervention",
+                "Peer-Mediated"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SPED_MD",
+      "name": "Methodology for Multiple Disabilities (MD)",
+      "description": "Aims, principles, sensory impairment approaches, therapeutic interventions, Universal Design for Learning, and computer access for persons with Multiple Disabilities.",
+      "subtopics": [
+        {
+          "subtopic_id": "SPED_MD_CURR",
+          "name": "Curriculum, Material Adaptation, and Sensory Strategies for MD",
+          "description": "Curriculum development concepts, material adaptation, and teaching approaches for sensory impairments.",
+          "concepts": [
+            {
+              "concept_id": "SPED_MD_CURR_001",
+              "name": "Curriculum Development Aims, Principles, and Types for MD",
+              "description": "Aims, concepts, principles, and types/approaches of curriculum development for individuals with multiple disabilities.",
+              "learning_objective": "Formulate curriculum aims and design approaches suitable for severe/multiple disabilities.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "multiple disabilities",
+                "curriculum principles",
+                "curriculum approaches"
+              ]
+            },
+            {
+              "concept_id": "SPED_MD_CURR_002",
+              "name": "Curricular and Co-curricular Material Adaptation for MD",
+              "description": "Adapting physical, learning, and co-curricular materials for complex needs in MD.",
+              "learning_objective": "Adapt learning and co-curricular materials to enable active engagement for children with MD.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "material adaptation",
+                "co-curricular adaptation",
+                "complex needs"
+              ]
+            },
+            {
+              "concept_id": "SPED_MD_CURR_003",
+              "name": "Teaching Methods and Strategies for Sensory Impairment",
+              "description": "Specialized instructional approaches and techniques for managing concurrent sensory impairments.",
+              "learning_objective": "Apply specialized pedagogical techniques for learners with dual or multiple sensory impairments.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "sensory impairment",
+                "deafblindness",
+                "sensory strategies"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SPED_MD_INTERV",
+          "name": "Therapeutic Interventions, Management, and Technology in MD",
+          "description": "Classroom management, evaluation types, therapeutic interventions, UDL, and computer access.",
+          "concepts": [
+            {
+              "concept_id": "SPED_MD_INTERV_001",
+              "name": "Classroom Management and Evaluation Types in MD",
+              "description": "Classroom management techniques and specialized evaluation strategies for students with multiple disabilities.",
+              "learning_objective": "Organize classroom management and implement appropriate evaluation types for MD.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "classroom management",
+                "types of evaluation",
+                "MD assessment"
+              ]
+            },
+            {
+              "concept_id": "SPED_MD_INTERV_002",
+              "name": "Therapeutic Intervention Strategies",
+              "description": "Integrating multi-disciplinary therapeutic interventions into educational routines for MD.",
+              "learning_objective": "Integrate therapeutic intervention techniques within everyday educational strategies for MD.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "therapeutic interventions",
+                "multidisciplinary team",
+                "therapy integration"
+              ]
+            },
+            {
+              "concept_id": "SPED_MD_INTERV_003",
+              "name": "Universal Design for Learning (UDL) and Computer Access",
+              "description": "Applying Universal Design for Learning principles and adaptive computer access technologies for MD.",
+              "learning_objective": "Implement Universal Design for Learning (UDL) frameworks and computer access technologies for MD.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "Universal Design in Learning",
+                "UDL",
+                "computer access",
+                "assistive technology"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

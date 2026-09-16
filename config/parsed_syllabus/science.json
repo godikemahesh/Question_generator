@@ -1,0 +1,1647 @@
+{
+  "subject_id": "science",
+  "name": "Science",
+  "source_file": "C:\\Users\\vijen\\Downloads\\question_gen\\syllabus\\science.txt",
+  "description": "Comprehensive Science syllabus for the District Selection Committee (DSC) examination, covering Class III to VIII content (with difficulty up to Class X) and Science Methodology.",
+  "topics": [
+    {
+      "topic_id": "SCI_LIVING_WORLD",
+      "name": "Living World",
+      "description": "Characteristics, diversity, structures, and habits of living organisms including plants, animals, humans, cells, and basic social/recreational units.",
+      "subtopics": [
+        {
+          "subtopic_id": "SCI_LIVING_WORLD_PLANTS_ANIMALS",
+          "name": "Plants and Animals Diversity",
+          "description": "Classification, characteristics, habitats, adaptations, and behaviors of plants and animals.",
+          "concepts": [
+            {
+              "concept_id": "SCI_LIVING_WORLD_PLANTS_ANIMALS_001",
+              "name": "Living vs Non-Living & Plant Classification",
+              "description": "Characteristics of living organisms and classification of plants based on size (herbs, shrubs, trees) and habitat (terrestrial, aquatic, desert).",
+              "learning_objective": "Differentiate living and non-living things and categorize plants based on growth habit and habitat.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "living things",
+                "herbs",
+                "shrubs",
+                "trees",
+                "terrestrial",
+                "aquatic",
+                "desert"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIVING_WORLD_PLANTS_ANIMALS_002",
+              "name": "Plant Parts and Functions",
+              "description": "Structure and biological functions of root, stem, leaf, flower, fruit, and seeds.",
+              "learning_objective": "Identify plant organs and explain their functional roles in plant survival.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "roots",
+                "stem",
+                "leaf functions",
+                "photosynthesis",
+                "transpiration"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIVING_WORLD_PLANTS_ANIMALS_003",
+              "name": "Animal Classification and Feeding Habits",
+              "description": "Classification of animals into oviparous/viviparous, herbivores/carnivores/omnivores, domestic/wild.",
+              "learning_objective": "Classify animals by reproductive mode, diet type, and domestic status.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "oviparous",
+                "viviparous",
+                "herbivore",
+                "carnivore",
+                "omnivore"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIVING_WORLD_PLANTS_ANIMALS_004",
+              "name": "Animal Habitats, Adaptations, Sounds, and Movements",
+              "description": "Different habitats, structural adaptations, animal sounds, locomotion methods, and bird features like beaks and nests.",
+              "learning_objective": "Explain animal adaptations to habitats, modes of movement, vocalizations, and bird features.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "habitat adaptation",
+                "locomotion",
+                "bird beaks",
+                "nests",
+                "animal shelters"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_LIVING_WORLD_HUMAN_BODY",
+          "name": "Human Body, Health, and Safety",
+          "description": "Human anatomy, skeletal and muscular systems, sense organs, health habits, safe/unsafe touch, and first aid.",
+          "concepts": [
+            {
+              "concept_id": "SCI_LIVING_WORLD_HUMAN_BODY_001",
+              "name": "Human Skeletal and Muscular Systems",
+              "description": "Bones, joints, cartilage, and muscle interactions providing structure and movement.",
+              "learning_objective": "Describe the skeletal structure, types of joints, cartilage, and muscular function.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "bones",
+                "joints",
+                "cartilage",
+                "muscles",
+                "skeleton"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIVING_WORLD_HUMAN_BODY_002",
+              "name": "Sense Organs and Hygiene",
+              "description": "Functions and care of eye, ear, nose, tongue, skin; personal hygiene and sensitivity to differently abled persons.",
+              "learning_objective": "Demonstrate care for sense organs and awareness toward differently abled individuals.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "sense organs",
+                "hygiene",
+                "differently abled",
+                "good habits"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIVING_WORLD_HUMAN_BODY_003",
+              "name": "Safety, Hazards, and First Aid",
+              "description": "Safety measures at home, school, road, water hazards, personal safety (good touch/bad touch), and basic first aid.",
+              "learning_objective": "Apply safety protocols, identify child safety boundaries, and administer basic first aid.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "first aid",
+                "road safety",
+                "good touch bad touch",
+                "water hazards"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_LIVING_WORLD_FOOD_AGRICULTURE",
+          "name": "Food, Nutrition, and Agricultural Practices",
+          "description": "Sources, preparation, components, deficiency diseases, preservation, and crop production methods.",
+          "concepts": [
+            {
+              "concept_id": "SCI_LIVING_WORLD_FOOD_AGRICULTURE_001",
+              "name": "Food Sources, Components, and Balanced Diet",
+              "description": "Nutritional components (carbohydrates, proteins, fats, vitamins, minerals), balanced diet, and junk food hazards.",
+              "learning_objective": "Identify food nutrients, construct a balanced diet, and explain risks of junk food.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "nutrients",
+                "carbohydrates",
+                "proteins",
+                "vitamins",
+                "balanced diet"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIVING_WORLD_FOOD_AGRICULTURE_002",
+              "name": "Deficiency Diseases and Food Preservation",
+              "description": "Malnutrition, vitamin/mineral deficiency diseases, food cooking methods, wastage prevention, and preservation techniques.",
+              "learning_objective": "Recognize deficiency symptoms and apply food preservation methods.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "deficiency diseases",
+                "scurvy",
+                "rickets",
+                "preservation",
+                "mid-day meal"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIVING_WORLD_FOOD_AGRICULTURE_003",
+              "name": "Agricultural Practices, Tools, and Food Storage",
+              "description": "Steps in crop production (ploughing, sowing, irrigation, harvesting), farm tools, storage, and animal husbandry.",
+              "learning_objective": "Detail agricultural procedures, agricultural implements, storage methods, and animal food sources.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "agriculture tools",
+                "irrigation",
+                "crop storage",
+                "animal husbandry"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_LIVING_WORLD_CELL_MICRO_SOCIETY",
+          "name": "Cell Biology, Microorganisms, Family, and Recreation",
+          "description": "Cellular basics, microbiology, family dynamics, shelter types, and recreational activities.",
+          "concepts": [
+            {
+              "concept_id": "SCI_LIVING_WORLD_CELL_MICRO_SOCIETY_001",
+              "name": "Cell Structure and Function",
+              "description": "Cell as basic unit of life, cell organelle structures, plant vs animal cells.",
+              "learning_objective": "Explain cell theory, identify cell organelles, and distinguish plant from animal cells.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "cell membrane",
+                "nucleus",
+                "cytoplasm",
+                "plant cell",
+                "animal cell"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIVING_WORLD_CELL_MICRO_SOCIETY_002",
+              "name": "Microorganisms: Friends and Foes",
+              "description": "Types of microorganisms (bacteria, fungi, protozoa, algae, viruses), beneficial uses, and harmful disease-causing pathogens.",
+              "learning_objective": "Categorize microbes and distinguish between useful applications and pathogenic effects.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "bacteria",
+                "fungi",
+                "viruses",
+                "fermentation",
+                "pathogens"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIVING_WORLD_CELL_MICRO_SOCIETY_003",
+              "name": "Family, Shelter, Migration, and Games",
+              "description": "Family types/budgets, housing types, migration causes/effects, slums, and indoor/outdoor games.",
+              "learning_objective": "Analyze family systems, socio-economic shelter challenges, and physical benefits of games.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "family tree",
+                "migration",
+                "slums",
+                "indoor games",
+                "outdoor games"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SCI_LIFE_PROCESSES",
+      "name": "Life Processes",
+      "description": "Biological mechanisms in plants and animals including nutrition, respiration, circulation, excretion, coordination, and reproduction.",
+      "subtopics": [
+        {
+          "subtopic_id": "SCI_LIFE_PROCESSES_NUTRITION_RESPIRATION",
+          "name": "Nutrition and Respiration",
+          "description": "Modes of nutrition and physiological mechanisms of gas exchange in plants and animals.",
+          "concepts": [
+            {
+              "concept_id": "SCI_LIFE_PROCESSES_NUTRITION_RESPIRATION_001",
+              "name": "Plant Nutrition Modes",
+              "description": "Autotrophic nutrition, photosynthesizing mechanisms, heterotrophic plants (parasitic, saprophytic, insectivorous).",
+              "learning_objective": "Contrast autotrophic and heterotrophic plant nutrition mechanisms.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "autotrophic",
+                "parasitic",
+                "saprophytic",
+                "insectivorous",
+                "cuscuta"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIFE_PROCESSES_NUTRITION_RESPIRATION_002",
+              "name": "Digestion in Humans and Animals",
+              "description": "Human digestive tract and process, digestion in ruminants (grass eaters), and pseudopodial ingestion in Amoeba.",
+              "learning_objective": "Trace food movement in human alimentary canal, ruminant stomachs, and cellular digestion in Amoeba.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "digestive system",
+                "ruminants",
+                "amoeba",
+                "ingestion",
+                "enzymes"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIFE_PROCESSES_NUTRITION_RESPIRATION_003",
+              "name": "Respiration in Plants and Animals",
+              "description": "Aerobic vs anaerobic respiration, cellular respiration, human respiratory system, stomatal exchange in plants.",
+              "learning_objective": "Explain cellular respiration pathways and compare respiration mechanisms across species.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "aerobic respiration",
+                "anaerobic respiration",
+                "stomata",
+                "lungs",
+                "gills"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_LIFE_PROCESSES_CIRCULATION_EXCRETION_CONTROL",
+          "name": "Circulation, Excretion, and Neural Control",
+          "description": "Internal transport systems, waste elimination, and nervous system coordination.",
+          "concepts": [
+            {
+              "concept_id": "SCI_LIFE_PROCESSES_CIRCULATION_EXCRETION_CONTROL_001",
+              "name": "Human Circulatory System and Plant Transport",
+              "description": "Heart structure, blood composition, blood vessels, xylem/phloem transport in plants.",
+              "learning_objective": "Describe human cardiac circulation and vascular transport in flora.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "heart",
+                "blood vessels",
+                "xylem",
+                "phloem",
+                "transpiration pull"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIFE_PROCESSES_CIRCULATION_EXCRETION_CONTROL_002",
+              "name": "Excretory System in Animals",
+              "description": "Waste removal mechanisms, human urinary system (kidneys, ureters, bladder, urethra).",
+              "learning_objective": "Outline the human excretory pathways and metabolic waste elimination.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "kidneys",
+                "nephron",
+                "urine formation",
+                "excretion"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIFE_PROCESSES_CIRCULATION_EXCRETION_CONTROL_003",
+              "name": "Nervous System and Coordination",
+              "description": "Central and peripheral nervous systems, neurons, brain, spinal cord, reflex action.",
+              "learning_objective": "Explain neural structure and reflex mechanisms handling sensory response.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "nervous system",
+                "neuron",
+                "brain",
+                "spinal cord",
+                "reflex action"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_LIFE_PROCESSES_REPRODUCTION_ADOLESCENCE",
+          "name": "Reproduction, Adolescence, and Development",
+          "description": "Modes of reproduction, seed dispersal, human adolescence, hormonal regulation, and reproductive health.",
+          "concepts": [
+            {
+              "concept_id": "SCI_LIFE_PROCESSES_REPRODUCTION_ADOLESCENCE_001",
+              "name": "Modes of Plant Reproduction & Seed Dispersal",
+              "description": "Asexual techniques (budding, fragmentation, spore formation), vegetative propagation, sexual reproduction in flowers, seed dispersal agents.",
+              "learning_objective": "Compare asexual/sexual reproduction in plants and explain seed dispersal methods.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "vegetative propagation",
+                "pollination",
+                "fertilization",
+                "seed dispersal"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIFE_PROCESSES_REPRODUCTION_ADOLESCENCE_002",
+              "name": "Animal Reproduction and Metamorphosis",
+              "description": "Sexual and asexual reproduction in animals, male/female reproductive systems, fertilization (internal/external), metamorphosis in frog/silkworm.",
+              "learning_objective": "Detail animal reproductive organ systems and lifecycle developmental changes (metamorphosis).",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "fertilization",
+                "zygote",
+                "embryo",
+                "metamorphosis",
+                "tadpole"
+              ]
+            },
+            {
+              "concept_id": "SCI_LIFE_PROCESSES_REPRODUCTION_ADOLESCENCE_003",
+              "name": "Adolescence, Hormones, and Reproductive Health",
+              "description": "Puberty changes, sex hormones, endocrine glands, sex determination in humans, reproductive hygiene.",
+              "learning_objective": "Identify physical/hormonal changes during puberty, sex determination genetics, and hygiene practices.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "puberty",
+                "testosterone",
+                "estrogen",
+                "endocrine system",
+                "sex determination"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SCI_MATTER_MATERIALS",
+      "name": "Matter and Materials",
+      "description": "Classification of materials, chemical substances, solutions, chemical transformations, fuels, and synthetic polymers.",
+      "subtopics": [
+        {
+          "subtopic_id": "SCI_MATTER_MATERIALS_PROPERTIES_SEPARATION",
+          "name": "Properties of Matter and Separation Techniques",
+          "description": "Classification of objects, properties of metals and non-metals, reactivity series, and separation methods.",
+          "concepts": [
+            {
+              "concept_id": "SCI_MATTER_MATERIALS_PROPERTIES_SEPARATION_001",
+              "name": "Classification and Properties of Materials",
+              "description": "Grouping materials based on luster, hardness, transparency, solubility, density.",
+              "learning_objective": "Classify common substances according to physical properties.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "luster",
+                "solubility",
+                "transparency",
+                "density",
+                "hardness"
+              ]
+            },
+            {
+              "concept_id": "SCI_MATTER_MATERIALS_PROPERTIES_SEPARATION_002",
+              "name": "Metals and Non-Metals",
+              "description": "Physical and chemical properties of metals/non-metals, reactivity series of metals, real-world applications.",
+              "learning_objective": "Contrast metallic and non-metallic properties and predict reactions based on reactivity series.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "malleability",
+                "ductility",
+                "reactivity series",
+                "metals",
+                "non-metals"
+              ]
+            },
+            {
+              "concept_id": "SCI_MATTER_MATERIALS_PROPERTIES_SEPARATION_003",
+              "name": "Methods of Separation and Solutions",
+              "description": "Filtration, evaporation, decantation, winnowing; saturated and unsaturated solutions, solubility limits.",
+              "learning_objective": "Select appropriate separation techniques for mixtures and define solution saturation.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "separation techniques",
+                "filtration",
+                "decantation",
+                "saturated solution"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_MATTER_MATERIALS_ACIDS_BASES_CHANGES",
+          "name": "Acids, Bases, Salts, and Chemical Reactions",
+          "description": "Acids, bases, indicators, neutralization reactions, physical vs chemical changes, and corrosion control.",
+          "concepts": [
+            {
+              "concept_id": "SCI_MATTER_MATERIALS_ACIDS_BASES_CHANGES_001",
+              "name": "Acids, Bases, and Neutralization",
+              "description": "Properties of acids/bases, natural and synthetic indicators (litmus, turmeric, phenolphthalein), neutralization in daily life.",
+              "learning_objective": "Identify acidic/basic substances using indicators and explain neutralization applications.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "acid",
+                "base",
+                "litmus",
+                "neutralization",
+                "pH"
+              ]
+            },
+            {
+              "concept_id": "SCI_MATTER_MATERIALS_ACIDS_BASES_CHANGES_002",
+              "name": "Physical and Chemical Changes",
+              "description": "Reversible physical changes vs irreversible chemical changes, indications of chemical reactions.",
+              "learning_objective": "Differentiate physical from chemical transformations with real-world examples.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "physical change",
+                "chemical change",
+                "reversibility",
+                "reactants"
+              ]
+            },
+            {
+              "concept_id": "SCI_MATTER_MATERIALS_ACIDS_BASES_CHANGES_003",
+              "name": "Rusting of Iron and Crystallization",
+              "description": "Causes of iron oxidation, protective methods (galvanization), process of crystallization.",
+              "learning_objective": "Explain oxidation of metals, preventive galvanization, and pure crystal formation.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "rusting",
+                "galvanization",
+                "crystallization",
+                "oxidation"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_MATTER_MATERIALS_COMBUSTION_FUELS_FIBRES",
+          "name": "Combustion, Energy Resources, Fibres, and Plastics",
+          "description": "Fossil fuels, fire safety, synthetic fibers, plastic types, and environmental impacts.",
+          "concepts": [
+            {
+              "concept_id": "SCI_MATTER_MATERIALS_COMBUSTION_FUELS_FIBRES_001",
+              "name": "Combustion, Flame Structure, and Fire Control",
+              "description": "Conditions for burning, ignition temperature, inflammable substances, flame zones/color, fire fighting methods.",
+              "learning_objective": "Analyze requirements for combustion, structure of a candle flame, and fire control techniques.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "combustion",
+                "ignition temperature",
+                "flame zones",
+                "fire extinguisher"
+              ]
+            },
+            {
+              "concept_id": "SCI_MATTER_MATERIALS_COMBUSTION_FUELS_FIBRES_002",
+              "name": "Fossil Fuels, Petroleum Refining, and Conservation",
+              "description": "Exhaustible/inexhaustible resources, formation and uses of coal/petroleum/natural gas, refining fractions, misuse effects.",
+              "learning_objective": "Describe fossil fuel formation, petroleum refining fractions, and sustainable energy usage.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "coal",
+                "petroleum refining",
+                "natural gas",
+                "coke",
+                "petrochemicals"
+              ]
+            },
+            {
+              "concept_id": "SCI_MATTER_MATERIALS_COMBUSTION_FUELS_FIBRES_003",
+              "name": "Natural & Synthetic Fibres and Plastics",
+              "description": "Cotton, silk, wool, nylon, rayon, polyester, acrylic; thermoplastics vs thermosetting plastics; environmental degradation.",
+              "learning_objective": "Categorize natural vs synthetic polymers and evaluate environmental impact of non-biodegradable plastics.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "synthetic fibres",
+                "nylon",
+                "plastics",
+                "thermoplastic",
+                "biodegradable"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SCI_PHYSICAL_PHENOMENA",
+      "name": "Physical Phenomena",
+      "description": "Core concepts of physics including motion, force, friction, pressure, heat, optics, electricity, magnetism, sound, and natural disasters.",
+      "subtopics": [
+        {
+          "subtopic_id": "SCI_PHYSICAL_PHENOMENA_MOTION_FORCE_PRESSURE",
+          "name": "Measurement, Motion, Force, and Pressure",
+          "description": "Units of length/time, motion types, speed calculation, forces, friction principles, and pressure dynamics.",
+          "concepts": [
+            {
+              "concept_id": "SCI_PHYSICAL_PHENOMENA_MOTION_FORCE_PRESSURE_001",
+              "name": "Measurement, Motion, and Distance-Time Graphs",
+              "description": "Standard SI units, non-standard units, rectiliener/circular/periodic motion, uniform/non-uniform motion, speed formula, distance-time graphs.",
+              "learning_objective": "Measure distances accurately, calculate speed, and interpret distance-time graphs.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "SI units",
+                "speed",
+                "rectilinear motion",
+                "periodic motion",
+                "distance-time graph"
+              ]
+            },
+            {
+              "concept_id": "SCI_PHYSICAL_PHENOMENA_MOTION_FORCE_PRESSURE_002",
+              "name": "Force and Pressure Dynamics",
+              "description": "Contact vs non-contact forces, net force, effects of force, fluid pressure, atmospheric pressure measurement.",
+              "learning_objective": "Distinguish force types and calculate pressure exerted by solids, fluids, and atmosphere.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "net force",
+                "contact force",
+                "pressure",
+                "fluid pressure",
+                "atmospheric pressure"
+              ]
+            },
+            {
+              "concept_id": "SCI_PHYSICAL_PHENOMENA_MOTION_FORCE_PRESSURE_003",
+              "name": "Friction: Characteristics and Control",
+              "description": "Factors affecting friction, types (static, sliding, rolling, drag), advantages/disadvantages, techniques to modify friction.",
+              "learning_objective": "Identify friction types and explain methods to increase or reduce friction in practical applications.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "static friction",
+                "sliding friction",
+                "rolling friction",
+                "lubrication",
+                "drag"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_PHYSICAL_PHENOMENA_HEAT_LIGHT",
+          "name": "Heat and Light",
+          "description": "Thermal energy transfer, light reflection, optical instruments, dispersion, and vision.",
+          "concepts": [
+            {
+              "concept_id": "SCI_PHYSICAL_PHENOMENA_HEAT_LIGHT_001",
+              "name": "Heat, Temperature, and Thermal Transfer",
+              "description": "Temperature scales/units, clinical and laboratory thermometers, conduction, convection, and radiation mechanisms.",
+              "learning_objective": "Measure temperature accurately and differentiate heat transfer modes.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "conduction",
+                "convection",
+                "radiation",
+                "thermometer",
+                "celsius"
+              ]
+            },
+            {
+              "concept_id": "SCI_PHYSICAL_PHENOMENA_HEAT_LIGHT_002",
+              "name": "Light, Shadows, and Reflection",
+              "description": "Transparent/opaque/translucent media, pinhole camera, laws of reflection, regular vs diffused reflection, plane mirror images.",
+              "learning_objective": "Explain shadow formation, pinhole imaging, and reflection laws.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "reflection",
+                "shadow",
+                "opaque",
+                "plane mirror",
+                "diffused reflection"
+              ]
+            },
+            {
+              "concept_id": "SCI_PHYSICAL_PHENOMENA_HEAT_LIGHT_003",
+              "name": "Spherical Mirrors, Lenses, Dispersion, and Human Eye",
+              "description": "Concave/convex mirrors and lenses, spectrum dispersion through prism, human eye anatomy, vision defects, Braille system.",
+              "learning_objective": "Detail image formation by spherical optics, dispersion of white light, and eye anatomy/care.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "concave mirror",
+                "convex lens",
+                "dispersion",
+                "human eye",
+                "braille"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_PHYSICAL_PHENOMENA_ELEC_MAG_SOUND",
+          "name": "Electricity, Magnetism, Sound, and Universe",
+          "description": "Electric circuits, magnetic properties, sound wave physics, natural electrical/tectonic phenomena, and astronomy.",
+          "concepts": [
+            {
+              "concept_id": "SCI_PHYSICAL_PHENOMENA_ELEC_MAG_SOUND_001",
+              "name": "Electricity, Circuits, and Chemical/Magnetic Effects",
+              "description": "Circuit diagrams, conductors/insulators, heating effect (fuse, MCB, CFL, LED), magnetic effect (electromagnet, bell), electroplating.",
+              "learning_objective": "Construct basic electric circuits and demonstrate heating, magnetic, and chemical effects of current.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "circuit",
+                "fuse",
+                "electromagnet",
+                "electroplating",
+                "conductors"
+              ]
+            },
+            {
+              "concept_id": "SCI_PHYSICAL_PHENOMENA_ELEC_MAG_SOUND_002",
+              "name": "Magnetism and Properties",
+              "description": "Discovery of magnets, magnetic/non-magnetic materials, poles, attraction/repulsion, magnetic compass, proper storage.",
+              "learning_objective": "Demonstrate magnetic properties, pole interactions, and directional compass usage.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "magnetic poles",
+                "compass",
+                "attraction",
+                "repulsion",
+                "demagnetization"
+              ]
+            },
+            {
+              "concept_id": "SCI_PHYSICAL_PHENOMENA_ELEC_MAG_SOUND_003",
+              "name": "Sound Physics and Wave Characteristics",
+              "description": "Vibrational sound production, human ear mechanism, longitudinal/transverse waves, wavelength, frequency, amplitude, pitch, loudness, noise pollution.",
+              "learning_objective": "Explain sound propagation, auditory perception, wave parameters, and noise pollution causes.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "frequency",
+                "amplitude",
+                "pitch",
+                "loudness",
+                "decibel",
+                "human ear"
+              ]
+            },
+            {
+              "concept_id": "SCI_PHYSICAL_PHENOMENA_ELEC_MAG_SOUND_004",
+              "name": "Natural Phenomena and Our Universe",
+              "description": "Static electricity, lightning conductors, earthquakes/tsunamis, lunar phases, solar/lunar eclipses, solar system, constellations, artificial satellites.",
+              "learning_objective": "Explain electrostatics, seismic activity, planetary motion, eclipses, and space technology.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "lightning conductor",
+                "earthquake",
+                "eclipses",
+                "solar system",
+                "constellation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SCI_TRANS_COMM",
+      "name": "Transportation and Communication",
+      "description": "Evolution of travel, global trade networks, historical and modern communication methods, and socio-economic integration.",
+      "subtopics": [
+        {
+          "subtopic_id": "SCI_TRANS_COMM_TRANSPORT",
+          "name": "Transportation Systems and Global Trade",
+          "description": "History of transport, traffic signage, modes across terrains (hills, deserts, water), import/export, tourism.",
+          "concepts": [
+            {
+              "concept_id": "SCI_TRANS_COMM_TRANSPORT_001",
+              "name": "Modes and Adaptation of Transport",
+              "description": "Historical evolution of vehicles, signs/symbols, specialized transport for hilly, desert, forest, and aquatic terrains.",
+              "learning_objective": "Trace transport history and identify transit modes suited to distinct topographies.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "modes of travel",
+                "transportation signs",
+                "topography",
+                "waterways"
+              ]
+            },
+            {
+              "concept_id": "SCI_TRANS_COMM_TRANSPORT_002",
+              "name": "International Transport, Goods, and Tourism",
+              "description": "Freight transit, import/export dynamics, global economic connectivity, tourism, and Seven Wonders of the World.",
+              "learning_objective": "Explain international trade transport mechanics and economic benefits of tourism.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "import export",
+                "freight",
+                "international transport",
+                "tourism"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_TRANS_COMM_COMMUNICATION",
+          "name": "Communication Systems and Global Integration",
+          "description": "Human/animal signaling, historical mail systems, modern digital communication media, mass media, global shrinking.",
+          "concepts": [
+            {
+              "concept_id": "SCI_TRANS_COMM_COMMUNICATION_001",
+              "name": "Types and Evolution of Communication",
+              "description": "Gestural communication in animals/humans, historical postal systems, transitions to electronic communication.",
+              "learning_objective": "Compare expressive communication modes across human history and animal behavior.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "gestures",
+                "postal service",
+                "telegraph",
+                "animal communication"
+              ]
+            },
+            {
+              "concept_id": "SCI_TRANS_COMM_COMMUNICATION_002",
+              "name": "Mass Media, Digital Tools, and World Connectivity",
+              "description": "Impact of radio, TV, cell phones, email, social media, newspapers; how transport and communication create a global village.",
+              "learning_objective": "Evaluate mass communication media and summarize how connectivity bridges global distances.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "mass communication",
+                "social media",
+                "internet",
+                "global village",
+                "e-mail"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SCI_PROFESSIONS_SERVICES",
+      "name": "Professions, Services, and Governance",
+      "description": "Societal occupations, essential village and urban helping agencies, local governance structures, and public services.",
+      "subtopics": [
+        {
+          "subtopic_id": "SCI_PROFESSIONS_SERVICES_COMMUNITY",
+          "name": "Professions, Helper Agencies, and Governance",
+          "description": "Trades, agricultural assistance agencies, public utilities, and tiers of government.",
+          "concepts": [
+            {
+              "concept_id": "SCI_PROFESSIONS_SERVICES_COMMUNITY_001",
+              "name": "Occupations and Household Tools",
+              "description": "Roles of farmers, cobblers, tailors, artisans; specialized tools and household materials associated with professions.",
+              "learning_objective": "Identify key community occupations and match tools/materials to their specific trades.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "professions",
+                "occupations",
+                "tools",
+                "artificers",
+                "community helpers"
+              ]
+            },
+            {
+              "concept_id": "SCI_PROFESSIONS_SERVICES_COMMUNITY_002",
+              "name": "Public Helping Institutions and Rural Support",
+              "description": "Role of banks, E-Seva centers, Primary Health Centers (PHCs), Gram Panchayat offices, post offices.",
+              "learning_objective": "Describe functions of essential public service institutions supporting rural and urban communities.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "PHC",
+                "e-Seva",
+                "panchayat",
+                "post office",
+                "public services"
+              ]
+            },
+            {
+              "concept_id": "SCI_PROFESSIONS_SERVICES_COMMUNITY_003",
+              "name": "Governance Structures and Services",
+              "description": "Organization and duties of Local Self Government, State Government, Central Government, and the Judiciary.",
+              "learning_objective": "Outline the three-tiered government architecture and judicial function in public administration.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "local self government",
+                "state government",
+                "judiciary",
+                "civic amenities"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SCI_ENVIRONMENT",
+      "name": "Our Environment",
+      "description": "Atmospheric dynamics, climate change, air quality, water resource management, sewage treatment, biodiversity, and conservation.",
+      "subtopics": [
+        {
+          "subtopic_id": "SCI_ENVIRONMENT_CLIMATE_AIR",
+          "name": "Climate Change, Atmosphere, and Air Quality",
+          "description": "Weather, extreme climatic events, global environmental degradation, atmospheric composition, nitrogen cycle, air pollution.",
+          "concepts": [
+            {
+              "concept_id": "SCI_ENVIRONMENT_CLIMATE_AIR_001",
+              "name": "Weather, Climate, and Global Issues",
+              "description": "Weather parameters, rain/floods/cyclones, disaster management, greenhouse effect, global warming, acid rain.",
+              "learning_objective": "Analyze climate events, mechanisms of global warming/acid rain, and disaster mitigation strategies.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "greenhouse effect",
+                "global warming",
+                "acid rain",
+                "disaster management",
+                "cyclones"
+              ]
+            },
+            {
+              "concept_id": "SCI_ENVIRONMENT_CLIMATE_AIR_002",
+              "name": "Air Composition, Nitrogen Cycle, and Air Pollution",
+              "description": "Components of air, properties, oxygen cycle, atmospheric nitrogen fixation cycle, air pollutants (causes, effects, prevention).",
+              "learning_objective": "Explain gas cycles in the atmosphere and formulate measures to mitigate air pollution.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "nitrogen cycle",
+                "oxygen replacement",
+                "air pollution",
+                "smog",
+                "eco-friendly"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_ENVIRONMENT_WATER_SEWAGE",
+          "name": "Water Resources, Management, and Sanitation",
+          "description": "Water cycle, freshwater sources in AP, water conservation, pollution control, sewage management, and sanitation.",
+          "concepts": [
+            {
+              "concept_id": "SCI_ENVIRONMENT_WATER_SEWAGE_001",
+              "name": "Water Properties, Water Cycle, and Local Rivers",
+              "description": "Physical forms/properties of water, hydrologic cycle, major rivers of Andhra Pradesh, droughts and floods.",
+              "learning_objective": "Detail the water cycle and evaluate local river ecosystems and hydrological challenges.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "water cycle",
+                "AP rivers",
+                "drought",
+                "floods",
+                "water properties"
+              ]
+            },
+            {
+              "concept_id": "SCI_ENVIRONMENT_WATER_SEWAGE_002",
+              "name": "Water Conservation, Pollution, and Safe Drinking Water",
+              "description": "Tank management, rain water harvesting, causes/effects of water contamination, purification of drinking water.",
+              "learning_objective": "Outline water conservation methods and potable water purification techniques.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "rainwater harvesting",
+                "water pollution",
+                "safe drinking water",
+                "tank pollution"
+              ]
+            },
+            {
+              "concept_id": "SCI_ENVIRONMENT_WATER_SEWAGE_003",
+              "name": "Sewage Management, Wastewater Treatment, and Sanitation",
+              "description": "Wastewater sources, sewage treatment process, household sanitation practices, alternative sewage disposal options.",
+              "learning_objective": "Explain wastewater treatment steps and sanitary waste management practices.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "sewage treatment",
+                "wastewater",
+                "sanitation",
+                "housekeeping practices"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_ENVIRONMENT_BIODIVERSITY",
+          "name": "Biodiversity, Forests, and Conservation",
+          "description": "Forest ecosystems, flora/fauna interactions, deforestation consequences, conservation movements, protected areas.",
+          "concepts": [
+            {
+              "concept_id": "SCI_ENVIRONMENT_BIODIVERSITY_001",
+              "name": "Forest Ecosystems and Interdependence",
+              "description": "Flora and fauna of forests, ecosystem services, green cover benefits, ecological balance.",
+              "learning_objective": "Explain ecological interrelationships among forest organisms and systemic benefits of forests.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "flora",
+                "fauna",
+                "forest ecosystems",
+                "interdependence"
+              ]
+            },
+            {
+              "concept_id": "SCI_ENVIRONMENT_BIODIVERSITY_002",
+              "name": "Deforestation, Conservation, and Wildlife Protection",
+              "description": "Causes/effects of deforestation, Chipko Movement, national parks/sanctuaries, endangered and endemic species.",
+              "learning_objective": "Assess environmental threats of deforestation and detail strategies for wildlife preservation.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "deforestation",
+                "chipko movement",
+                "endangered species",
+                "sanctuaries",
+                "endemic species"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic_id": "SCI_PEDAGOGY",
+      "name": "Science Methodology",
+      "description": "Pedagogical principles, curriculum design, learning objectives, instructional methods, laboratory management, and evaluation in teaching Science.",
+      "subtopics": [
+        {
+          "subtopic_id": "SCI_PEDAGOGY_FOUNDATIONS_AIMS",
+          "name": "Foundations, Aims, and Standards of Science Education",
+          "description": "Nature and history of science, aims, academic standards, specifications, and curriculum design.",
+          "concepts": [
+            {
+              "concept_id": "SCI_PEDAGOGY_FOUNDATIONS_AIMS_001",
+              "name": "Nature, Scope, and History of Science",
+              "description": "Epistemology of science, historical development of scientific thought, scope in contemporary education.",
+              "learning_objective": "Understand the philosophical nature, broad scope, and historical milestones of science.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "nature of science",
+                "scientific method",
+                "history of science"
+              ]
+            },
+            {
+              "concept_id": "SCI_PEDAGOGY_FOUNDATIONS_AIMS_002",
+              "name": "Aims, Values, Academic Standards, and Objectives",
+              "description": "Values of science teaching (utilitarian, cultural, disciplinary), instructional objectives, academic standards.",
+              "learning_objective": "Formulate behavioral objectives and align teaching with established academic standards.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "academic standards",
+                "teaching objectives",
+                "utilitarian value",
+                "bloom taxonomy"
+              ]
+            },
+            {
+              "concept_id": "SCI_PEDAGOGY_FOUNDATIONS_AIMS_003",
+              "name": "Science Curriculum and Textbook Analysis",
+              "description": "Principles of science curriculum construction, textbook evaluation, criteria of good science textbooks.",
+              "learning_objective": "Critique science textbooks and explain principles of sound science curriculum design.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "science curriculum",
+                "textbook design",
+                "curriculum principles"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_PEDAGOGY_METHODS_RESOURCES",
+          "name": "Teaching Methods, TLM, and Planning",
+          "description": "Pedagogical approaches, improvised aids, laboratory setup, lesson/year planning, and teacher role.",
+          "concepts": [
+            {
+              "concept_id": "SCI_PEDAGOGY_METHODS_RESOURCES_001",
+              "name": "Methods, Approaches, and Techniques of Teaching Science",
+              "description": "Inductive-deductive, lecture-demonstration, heuristic, project, inquiry-based, 5E learning model approaches.",
+              "learning_objective": "Select and implement appropriate teaching methods based on science topic demands.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "inquiry method",
+                "project method",
+                "heuristic method",
+                "5E model",
+                "demonstration"
+              ]
+            },
+            {
+              "concept_id": "SCI_PEDAGOGY_METHODS_RESOURCES_002",
+              "name": "TLM, Improvised Aids, and Science Laboratories",
+              "description": "Audio-visual aids, low-cost improvised teaching learning materials, science lab layout, safety rules, equipment management.",
+              "learning_objective": "Design low-cost teaching aids and effectively organize/manage a school science laboratory.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "TLM",
+                "improvised aids",
+                "science lab safety",
+                "lab equipment"
+              ]
+            },
+            {
+              "concept_id": "SCI_PEDAGOGY_METHODS_RESOURCES_003",
+              "name": "Instructional Planning and Role of Science Teacher",
+              "description": "Year plan, unit plan, lesson plan formulation, responsibilities, competencies, and professional growth of a science teacher.",
+              "learning_objective": "Construct detailed lesson plans and describe professional competencies of a science teacher.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "year plan",
+                "lesson plan",
+                "unit plan",
+                "teacher role"
+              ]
+            }
+          ]
+        },
+        {
+          "subtopic_id": "SCI_PEDAGOGY_EVALUATION_COCURRICULAR",
+          "name": "Assessment, Evaluation, and Science Activities",
+          "description": "Continuous comprehensive evaluation, test construction, science clubs, fairs, field trips, and museums.",
+          "concepts": [
+            {
+              "concept_id": "SCI_PEDAGOGY_EVALUATION_COCURRICULAR_001",
+              "name": "Assessment and Evaluation in Science",
+              "description": "Formative and summative assessment, Continuous Comprehensive Evaluation (CCE), diagnostic testing, remedial teaching, blue print design.",
+              "learning_objective": "Develop balanced assessment tools (CCE, scholastic/co-scholastic) and remedial strategies.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "CCE",
+                "formative assessment",
+                "summative assessment",
+                "blueprint",
+                "remedial teaching"
+              ]
+            },
+            {
+              "concept_id": "SCI_PEDAGOGY_EVALUATION_COCURRICULAR_002",
+              "name": "Co-Curricular Activities in Science",
+              "description": "Organization and educational benefits of Science Fairs, Science Clubs, Field Trips, and Science Museums.",
+              "learning_objective": "Plan and conduct out-of-classroom science activities to foster scientific temper.",
+              "difficulty_range": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "allowed_question_types": [
+                "conceptual",
+                "application",
+                "problem_solving"
+              ],
+              "keywords": [
+                "science fairs",
+                "science clubs",
+                "field trips",
+                "science museum",
+                "scientific temper"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
