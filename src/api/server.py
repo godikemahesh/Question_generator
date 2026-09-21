@@ -376,7 +376,13 @@ def update_syllabus_tree(data: UpdateTreeRequest, admin: dict = Depends(get_curr
     return {"message": "Syllabus topic tree updated successfully."}
 
 
-# ── UI Root Route ─────────────────────────────────────────────────────────────
+# ── UI Root & Health Monitoring Routes (UptimeRobot / Render) ─────────────────
+
+@app.head("/")
+def head_index():
+    """Handle HEAD requests from UptimeRobot / uptime checkers."""
+    return Response(status_code=status.HTTP_200_OK)
+
 
 @app.get("/", response_class=HTMLResponse)
 def index():
@@ -385,6 +391,21 @@ def index():
     if html_file.exists():
         return FileResponse(str(html_file))
     return HTMLResponse("<h1>ExamForge AI Platform UI Loading...</h1>")
+
+
+@app.api_route("/health", methods=["GET", "HEAD"])
+def health_check():
+    """Lightweight health check endpoint for monitoring services like UptimeRobot."""
+    return JSONResponse(
+        content={"status": "healthy", "service": "ExamForge AI Question Platform"},
+        status_code=status.HTTP_200_OK,
+    )
+
+
+@app.api_route("/ping", methods=["GET", "HEAD"])
+def ping():
+    """Ultra-fast ping endpoint."""
+    return Response(content="pong", status_code=status.HTTP_200_OK)
 
 
 if __name__ == "__main__":
