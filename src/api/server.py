@@ -23,10 +23,19 @@ logger = logging.getLogger(__name__)
 
 # Initialize Singletons
 storage = StorageManager()
-llm = MultiProviderLLM()
+initial_cfg = storage.get_config()
+llm = MultiProviderLLM(
+    gemini_keys=initial_cfg.get("gemini_keys"),
+    openrouter_keys=initial_cfg.get("openrouter_keys"),
+    groq_keys=initial_cfg.get("groq_keys"),
+    gemini_models=initial_cfg.get("gemini_models"),
+    gemini_key=initial_cfg.get("gemini_api_key", ""),
+    openrouter_key=initial_cfg.get("openrouter_api_key", ""),
+    groq_key=initial_cfg.get("groq_api_key", ""),
+)
 examforge = ExamForgeClient(
-    endpoint_url=storage.get_config().get("examforge_url"),
-    api_key=storage.get_config().get("examforge_api_key"),
+    endpoint_url=initial_cfg.get("examforge_url"),
+    api_key=initial_cfg.get("examforge_api_key"),
 )
 worker = GenerationWorker(storage=storage, llm=llm, examforge=examforge)
 
@@ -76,10 +85,15 @@ class ConfigUpdateRequest(BaseModel):
     gemini_api_key: Optional[str] = None
     openrouter_api_key: Optional[str] = None
     groq_api_key: Optional[str] = None
+    gemini_keys: Optional[list[str]] = None
+    openrouter_keys: Optional[list[str]] = None
+    groq_keys: Optional[list[str]] = None
+    gemini_models: Optional[list[str]] = None
     tavily_api_key: Optional[str] = None
     brave_api_key: Optional[str] = None
     exa_api_key: Optional[str] = None
     web_search_enabled: Optional[bool] = None
+    smart_search_enabled: Optional[bool] = None
 
 
 class ParseSyllabusRequest(BaseModel):
@@ -167,27 +181,30 @@ def get_worker_status(admin: dict = Depends(get_current_admin)):
 
 
 @app.post("/api/worker/start")
-def start_worker(admin: dict = Depends(get_current_admin)):
-    worker.start()
+async def start_worker(admin: dict = Depends(get_current_admin)):
+    import asyncio
+    worker.start(loop=asyncio.get_running_loop())
     return {"status": "started"}
 
 
 @app.post("/api/worker/pause")
-def pause_worker(admin: dict = Depends(get_current_admin)):
+async def pause_worker(admin: dict = Depends(get_current_admin)):
     worker.pause()
     return {"status": "paused"}
 
 
 @app.post("/api/worker/resume")
-def resume_worker(admin: dict = Depends(get_current_admin)):
-    worker.resume()
+async def resume_worker(admin: dict = Depends(get_current_admin)):
+    import asyncio
+    worker.resume(loop=asyncio.get_running_loop())
     return {"status": "resumed"}
 
 
 @app.post("/api/worker/stop")
-def stop_worker(admin: dict = Depends(get_current_admin)):
+async def stop_worker(admin: dict = Depends(get_current_admin)):
     worker.stop()
     return {"status": "stopped"}
+
 
 
 # ── Configuration & Webhook Settings ──────────────────────────────────────────
@@ -202,18 +219,19 @@ def update_config(data: ConfigUpdateRequest, admin: dict = Depends(get_current_a
     updates = {k: v for k, v in data.model_dump().items() if v is not None}
     storage.update_config(updates)
 
-    # Sync dynamically with in-memory clients
+    # Sync dynamically with in-memory clients (zero restart required!)
     cfg = storage.get_config()
     examforge.endpoint_url = cfg.get("examforge_url", "")
     examforge.api_key = cfg.get("examforge_api_key", "")
-    llm.update_keys(
-        gemini_key=cfg.get("gemini_api_key", ""),
-        openrouter_key=cfg.get("openrouter_api_key", ""),
-        groq_key=cfg.get("groq_api_key", ""),
+    llm.update_pools(
+        gemini_keys=cfg.get("gemini_keys"),
+        openrouter_keys=cfg.get("openrouter_keys"),
+        groq_keys=cfg.get("groq_keys"),
+        gemini_models=cfg.get("gemini_models"),
     )
     worker.search_manager.reload_config(cfg)
 
-    worker.log_event("Settings updated successfully.")
+    worker.log_event("Global configuration and LLM multi-key pools updated successfully.", "success")
     return {"message": "Config updated.", "config": storage.get_config()}
 
 
@@ -367,3 +385,11 @@ def index():
     if html_file.exists():
         return FileResponse(str(html_file))
     return HTMLResponse("<h1>ExamForge AI Platform UI Loading...</h1>")
+
+
+if __name__ == "__main__":
+    import os
+    import uvicorn
+    port = int(os.environ.get("PORT", 8080))
+    uvicorn.run("src.api.server:app", host="0.0.0.0", port=port, reload=False)
+

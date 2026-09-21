@@ -64,11 +64,17 @@ class StorageManager:
 
     def _execute_pg(self, query: str, params: tuple = (), fetch_all: bool = False, fetch_one: bool = False, commit: bool = True):
         import psycopg2
-        from psycopg2.extras import RealDictCursor
+        from psycopg2.extras import RealDictCursor, Json
         pg_query = query.replace("?", "%s")
+        adapted_params = []
+        for p in params:
+            if isinstance(p, (dict, list)):
+                adapted_params.append(Json(p))
+            else:
+                adapted_params.append(p)
         with psycopg2.connect(self.pg_url) as conn:
             with conn.cursor(cursor_factory=RealDictCursor) as cur:
-                cur.execute(pg_query, params)
+                cur.execute(pg_query, tuple(adapted_params))
                 if commit:
                     conn.commit()
                 if fetch_all:
@@ -95,10 +101,15 @@ class StorageManager:
                 gemini_api_key TEXT,
                 openrouter_api_key TEXT,
                 groq_api_key TEXT,
+                gemini_keys TEXT DEFAULT '[]',
+                openrouter_keys TEXT DEFAULT '[]',
+                groq_keys TEXT DEFAULT '[]',
+                gemini_models TEXT DEFAULT '["gemini-2.5-flash", "gemini-1.5-flash", "gemini-2.0-flash", "gemini-1.5-pro"]',
                 tavily_api_key TEXT,
                 brave_api_key TEXT,
                 exa_api_key TEXT,
-                web_search_enabled BOOLEAN,
+                web_search_enabled BOOLEAN DEFAULT 1,
+                smart_search_enabled BOOLEAN DEFAULT 1,
                 updated_at TEXT
             )
             """)
@@ -109,6 +120,11 @@ class StorageManager:
                 ("brave_api_key", "TEXT"),
                 ("exa_api_key", "TEXT"),
                 ("web_search_enabled", "BOOLEAN DEFAULT 1"),
+                ("gemini_keys", "TEXT DEFAULT '[]'"),
+                ("openrouter_keys", "TEXT DEFAULT '[]'"),
+                ("groq_keys", "TEXT DEFAULT '[]'"),
+                ("gemini_models", "TEXT DEFAULT '[\"gemini-2.5-flash\", \"gemini-1.5-flash\", \"gemini-2.0-flash\", \"gemini-1.5-pro\"]'"),
+                ("smart_search_enabled", "BOOLEAN DEFAULT 1"),
             ]:
                 try:
                     c.execute(f"ALTER TABLE app_config ADD COLUMN {col_name} {col_type}")
@@ -209,40 +225,86 @@ class StorageManager:
 
     # ── Config Methods ────────────────────────────────────────────────────────
 
+    def _normalize_config(self, cfg: dict) -> dict:
+        """Normalize configuration so multi-key lists and model lists are always valid lists."""
+        if not cfg:
+            cfg = {}
+        for key in ["gemini_keys", "openrouter_keys", "groq_keys", "gemini_models"]:
+            val = cfg.get(key)
+            if isinstance(val, str):
+                try:
+                    cfg[key] = json.loads(val)
+                except Exception:
+                    cfg[key] = []
+            elif not isinstance(val, list):
+                cfg[key] = []
+
+        # Fallback to single key if multi-key list is empty
+        if not cfg.get("gemini_keys") and cfg.get("gemini_api_key"):
+            cfg["gemini_keys"] = [cfg["gemini_api_key"]]
+        if not cfg.get("openrouter_keys") and cfg.get("openrouter_api_key"):
+            cfg["openrouter_keys"] = [cfg["openrouter_api_key"]]
+        if not cfg.get("groq_keys") and cfg.get("groq_api_key"):
+            cfg["groq_keys"] = [cfg["groq_api_key"]]
+
+        # Default gemini models if empty
+        if not cfg.get("gemini_models"):
+            cfg["gemini_models"] = ["gemini-2.5-flash", "gemini-1.5-flash", "gemini-2.0-flash", "gemini-1.5-pro"]
+
+        if "smart_search_enabled" not in cfg:
+            cfg["smart_search_enabled"] = True
+        if "web_search_enabled" not in cfg:
+            cfg["web_search_enabled"] = True
+        return cfg
+
     def get_config(self) -> dict:
         """Get global app configuration."""
+        raw_cfg = None
         if self.use_postgres:
             try:
                 row = self._execute_pg("SELECT * FROM app_config WHERE id = 'global'", fetch_one=True)
                 if row:
-                    return row
+                    raw_cfg = row
             except Exception as e:
                 logger.warning(f"Supabase PG get_config error: {e}")
 
-        if self.use_supabase:
+        if not raw_cfg and self.use_supabase:
             try:
                 res = self.supabase_client.table("app_config").select("*").eq("id", "global").execute()
                 if res.data:
-                    return res.data[0]
+                    raw_cfg = res.data[0]
             except Exception as e:
                 logger.warning(f"Supabase get_config error: {e}")
 
-        with sqlite3.connect(SQLITE_PATH) as conn:
-            conn.row_factory = sqlite3.Row
-            row = conn.execute("SELECT * FROM app_config WHERE id = 'global'").fetchone()
-            if row:
-                return dict(row)
-        return {
-            "examforge_url": EXAMFORGE_API_URL,
-            "examforge_api_key": EXAMFORGE_API_KEY,
-            "batch_size": EXAMFORGE_BATCH_SIZE,
-            "auto_dispatch": True,
-            "active_provider": "gemini",
-            "tavily_api_key": "",
-            "brave_api_key": "",
-            "exa_api_key": "",
-            "web_search_enabled": True,
-        }
+        if not raw_cfg:
+            with sqlite3.connect(SQLITE_PATH) as conn:
+                conn.row_factory = sqlite3.Row
+                row = conn.execute("SELECT * FROM app_config WHERE id = 'global'").fetchone()
+                if row:
+                    raw_cfg = dict(row)
+
+        if not raw_cfg:
+            raw_cfg = {
+                "examforge_url": EXAMFORGE_API_URL,
+                "examforge_api_key": EXAMFORGE_API_KEY,
+                "batch_size": EXAMFORGE_BATCH_SIZE,
+                "auto_dispatch": True,
+                "active_provider": "gemini",
+                "gemini_api_key": "",
+                "openrouter_api_key": "",
+                "groq_api_key": "",
+                "gemini_keys": [],
+                "openrouter_keys": [],
+                "groq_keys": [],
+                "gemini_models": ["gemini-2.5-flash", "gemini-1.5-flash", "gemini-2.0-flash", "gemini-1.5-pro"],
+                "tavily_api_key": "",
+                "brave_api_key": "",
+                "exa_api_key": "",
+                "web_search_enabled": True,
+                "smart_search_enabled": True,
+            }
+
+        return self._normalize_config(raw_cfg)
 
     def update_config(self, updates: dict):
         """Update app configuration."""
@@ -263,10 +325,18 @@ class StorageManager:
                 logger.warning(f"Supabase update_config error: {e}")
 
         with sqlite3.connect(SQLITE_PATH) as conn:
-            set_clauses = [f"{k} = ?" for k in updates.keys()]
-            values = list(updates.values())
+            # For SQLite, serialize list/dict fields to JSON strings
+            sqlite_updates = {}
+            for k, v in updates.items():
+                if isinstance(v, (list, dict)):
+                    sqlite_updates[k] = json.dumps(v)
+                else:
+                    sqlite_updates[k] = v
+            set_clauses = [f"{k} = ?" for k in sqlite_updates.keys()]
+            values = list(sqlite_updates.values())
             query = f"UPDATE app_config SET {', '.join(set_clauses)} WHERE id = 'global'"
             conn.execute(query, values)
+            conn.commit()
             conn.commit()
 
     # ── Subjects Methods ──────────────────────────────────────────────────────

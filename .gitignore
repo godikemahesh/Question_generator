@@ -7,3 +7,6 @@ question_bank/
 output/
 logs/
 *.egg-info/
+storage.db
+*.db
+scratch/

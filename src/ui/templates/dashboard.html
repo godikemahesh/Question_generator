@@ -73,11 +73,11 @@
       <div class="nav-right">
         <!-- LLM Priority Pill -->
         <div class="provider-pill" title="Automatic 3-Tier LLM Fallback Cascade">
-          <span class="prov-tag gemini active">1. Gemini</span>
+          <span class="prov-tag gemini active" id="nav-gemini-pill">1. Gemini</span>
           <span class="prov-arrow">→</span>
-          <span class="prov-tag openrouter">2. OpenRouter</span>
+          <span class="prov-tag openrouter" id="nav-openrouter-pill">2. OpenRouter</span>
           <span class="prov-arrow">→</span>
-          <span class="prov-tag groq">3. Groq</span>
+          <span class="prov-tag groq" id="nav-groq-pill">3. Groq</span>
         </div>
 
         <!-- Free Web Search Cascade Pill -->
@@ -337,22 +337,56 @@
 
           <!-- MULTI-PROVIDER LLM & FREE SEARCH CASCADE -->
           <div class="glass-panel settings-card">
-            <h3>LLM Providers & Free Web Search Cascade</h3>
-            <p class="sub-hint">Inference cascade: 1st Gemini → 2nd OpenRouter → 3rd Groq.</p>
+            <h3>LLM Key Pools & Smart Multi-Model Fallback</h3>
+            <p class="sub-hint">Inference cascade: 1st Gemini Pool (multi-model rotation) → 2nd OpenRouter Pool → 3rd Groq Pool.</p>
 
-            <div class="input-group">
-              <label for="cfg-gemini-key">1. Google Gemini API Key</label>
-              <input type="password" id="cfg-gemini-key" placeholder="AIzaSy...">
+            <!-- 1. GOOGLE GEMINI KEYS POOL -->
+            <div class="key-pool-block">
+              <div class="key-pool-header">
+                <label>1. Google Gemini API Keys Pool <span class="badge-count" id="gemini-count-badge">0 keys</span></label>
+                <span class="pool-tag gemini-tag">Priority 1 (Primary)</span>
+              </div>
+              <div id="gemini-keys-list" class="keys-list-container"></div>
+              <div class="add-key-row">
+                <input type="password" id="input-new-gemini-key" placeholder="Enter Gemini key (AIzaSy...)" class="input-add-key">
+                <button type="button" id="btn-add-gemini-key" class="btn btn-sm btn-secondary">＋ Add Key</button>
+              </div>
+              <!-- Gemini Model Rotation Chips -->
+              <div class="gemini-models-row">
+                <span class="sub-hint-small">Auto Model Rotation:</span>
+                <div class="model-chips-group">
+                  <span class="chip-model active" title="Primary (Latest)">gemini-3.8-flash</span>
+                  <span class="chip-model active" title="Fast fallback">gemini-3.7-flash</span>
+                  <span class="chip-model active" title="Secondary fallback">gemini-3.6-flash</span>
+                  <span class="chip-model active" title="Stable fallback">gemini-2.5-flash</span>
+                </div>
+              </div>
             </div>
 
-            <div class="input-group">
-              <label for="cfg-openrouter-key">2. OpenRouter API Key</label>
-              <input type="password" id="cfg-openrouter-key" placeholder="sk-or-v1-...">
+            <!-- 2. OPENROUTER KEYS POOL -->
+            <div class="key-pool-block">
+              <div class="key-pool-header">
+                <label>2. OpenRouter API Keys Pool <span class="badge-count" id="openrouter-count-badge">0 keys</span></label>
+                <span class="pool-tag openrouter-tag">Priority 2 (High Capacity)</span>
+              </div>
+              <div id="openrouter-keys-list" class="keys-list-container"></div>
+              <div class="add-key-row">
+                <input type="password" id="input-new-openrouter-key" placeholder="Enter OpenRouter key (sk-or-v1-...)" class="input-add-key">
+                <button type="button" id="btn-add-openrouter-key" class="btn btn-sm btn-secondary">＋ Add Key</button>
+              </div>
             </div>
 
-            <div class="input-group">
-              <label for="cfg-groq-key">3. Groq API Key (Ultra-fast Llama 3.3 70B Fallback)</label>
-              <input type="password" id="cfg-groq-key" placeholder="gsk_...">
+            <!-- 3. GROQ KEYS POOL -->
+            <div class="key-pool-block">
+              <div class="key-pool-header">
+                <label>3. Groq API Keys Pool (Llama 3.3 70B) <span class="badge-count" id="groq-count-badge">0 keys</span></label>
+                <span class="pool-tag groq-tag">Priority 3 (Ultra-Fast)</span>
+              </div>
+              <div id="groq-keys-list" class="keys-list-container"></div>
+              <div class="add-key-row">
+                <input type="password" id="input-new-groq-key" placeholder="Enter Groq key (gsk_...)" class="input-add-key">
+                <button type="button" id="btn-add-groq-key" class="btn btn-sm btn-secondary">＋ Add Key</button>
+              </div>
             </div>
 
             <!-- DEDICATED FREE SEARCH PROVIDERS CASCADE -->
@@ -378,10 +412,17 @@
                 <input type="password" id="cfg-exa-key" placeholder="exa-...">
               </div>
 
+              <div class="checkbox-group" style="margin-bottom: 8px;">
+                <label>
+                  <input type="checkbox" id="cfg-smart-search-enabled" checked>
+                  <span><strong>Smart Online Real-World Detection</strong> (Auto-triggers web search across ANY subject when recent facts, policies, acts, or 2024-2026 events are detected)</span>
+                </label>
+              </div>
+
               <div class="checkbox-group">
                 <label>
                   <input type="checkbox" id="cfg-search-enabled" checked>
-                  <span>Enable Real-time Web Search Cascade for General Knowledge & Current Affairs</span>
+                  <span>Enable Live Web Search Grounding</span>
                 </label>
               </div>
             </div>

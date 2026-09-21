@@ -20,10 +20,15 @@ CREATE TABLE IF NOT EXISTS app_config (
     gemini_api_key TEXT DEFAULT '',
     openrouter_api_key TEXT DEFAULT '',
     groq_api_key TEXT DEFAULT '',
+    gemini_keys JSONB DEFAULT '[]'::jsonb,
+    openrouter_keys JSONB DEFAULT '[]'::jsonb,
+    groq_keys JSONB DEFAULT '[]'::jsonb,
+    gemini_models JSONB DEFAULT '["gemini-2.5-flash", "gemini-1.5-flash", "gemini-2.0-flash", "gemini-1.5-pro"]'::jsonb,
     tavily_api_key TEXT DEFAULT '',
     brave_api_key TEXT DEFAULT '',
     exa_api_key TEXT DEFAULT '',
     web_search_enabled BOOLEAN NOT NULL DEFAULT true,
+    smart_search_enabled BOOLEAN NOT NULL DEFAULT true,
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 

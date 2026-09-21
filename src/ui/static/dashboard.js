@@ -74,8 +74,28 @@ const btnModalDismiss = document.getElementById("btn-modal-dismiss");
 const btnDownloadJson = document.getElementById("btn-download-json");
 
 
+let workerPollTimer = null;
+
+function startPolling() {
+  stopPolling();
+  pollWorker();
+  workerPollTimer = setInterval(pollWorker, 3000);
+}
+
+function stopPolling() {
+  if (workerPollTimer) {
+    clearInterval(workerPollTimer);
+    workerPollTimer = null;
+  }
+}
+
 // ================= HELPER FETCH WRAPPER =================
 async function apiFetch(url, options = {}) {
+  if (!authToken && !url.includes("/api/auth/login")) {
+    stopPolling();
+    showLogin();
+    throw new Error("Unauthorized");
+  }
   options.headers = options.headers || {};
   if (authToken) {
     options.headers["Authorization"] = `Bearer ${authToken}`;
@@ -84,6 +104,7 @@ async function apiFetch(url, options = {}) {
 
   const res = await fetch(url, options);
   if (res.status === 401) {
+    stopPolling();
     showLogin();
     throw new Error("Session expired or unauthorized");
   }
@@ -94,10 +115,8 @@ async function apiFetch(url, options = {}) {
 function showLogin() {
   authToken = "";
   localStorage.removeItem("ef_token");
-  const emailInput = document.getElementById("admin-email");
-  const passInput = document.getElementById("admin-password");
-  if (emailInput) emailInput.value = "";
-  if (passInput) passInput.value = "";
+  stopPolling();
+  // Keep whatever the user is typing intact — NEVER erase input values automatically!
   loginOverlay.classList.remove("hidden");
 }
 
@@ -139,6 +158,11 @@ btnLogout.addEventListener("click", async () => {
   try {
     await apiFetch("/api/auth/logout", { method: "POST" });
   } catch (e) {}
+  authToken = "";
+  localStorage.removeItem("ef_token");
+  stopPolling();
+  const passInput = document.getElementById("admin-password");
+  if (passInput) passInput.value = "";
   showLogin();
 });
 
@@ -196,6 +220,10 @@ btnStop.addEventListener("click", async () => {
 });
 
 async function pollWorker() {
+  if (!authToken) {
+    stopPolling();
+    return;
+  }
   try {
     const res = await apiFetch("/api/worker/status");
     if (!res.ok) return;
@@ -224,6 +252,19 @@ async function pollWorker() {
         .map((l) => `<div class="log-entry ${l.level || 'info'}"><span class="log-time">[${l.timestamp}]</span> ${l.message}</div>`)
         .join("");
       logList.scrollTop = logList.scrollHeight;
+    }
+
+    // Update Top Provider Pills with live key counts
+    if (data.provider_status) {
+      const g = data.provider_status.gemini;
+      const o = data.provider_status.openrouter;
+      const gr = data.provider_status.groq;
+      const gPill = document.getElementById("nav-gemini-pill");
+      const oPill = document.getElementById("nav-openrouter-pill");
+      const grPill = document.getElementById("nav-groq-pill");
+      if (gPill && g) gPill.textContent = `1. Gemini (${g.key_count || 0})`;
+      if (oPill && o) oPill.textContent = `2. OpenRouter (${o.key_count || 0})`;
+      if (grPill && gr) grPill.textContent = `3. Groq (${gr.key_count || 0})`;
     }
   } catch (e) {}
 }
@@ -338,6 +379,103 @@ window.manualSend = async function (subjectName) {
 };
 
 // ================= SCREEN B: WEBHOOK & SETTINGS =================
+let geminiKeysList = [];
+let openrouterKeysList = [];
+let groqKeysList = [];
+
+function maskKey(key) {
+  if (!key) return "";
+  if (key.length <= 10) return "••••••••";
+  return key.slice(0, 6) + "••••••••" + key.slice(-4);
+}
+
+function renderKeyPool(containerId, countBadgeId, keysArray, onRemoveCallback) {
+  const container = document.getElementById(containerId);
+  const badge = document.getElementById(countBadgeId);
+  if (!container) return;
+
+  if (badge) {
+    badge.textContent = `${keysArray.length} key${keysArray.length === 1 ? '' : 's'}`;
+  }
+
+  container.innerHTML = "";
+  if (keysArray.length === 0) {
+    container.innerHTML = `<div style="font-size: 11px; color: var(--text-muted); padding: 4px 0;">No keys configured in pool. Add one below.</div>`;
+    return;
+  }
+
+  keysArray.forEach((k, idx) => {
+    const row = document.createElement("div");
+    row.className = "key-item-row";
+    row.innerHTML = `
+      <div class="key-item-preview">
+        <span class="key-item-dot" title="Active Key"></span>
+        <span>Key #${idx + 1}: <strong>${maskKey(k)}</strong></span>
+      </div>
+      <button type="button" class="btn-remove-key" title="Remove key from pool" data-idx="${idx}">✕</button>
+    `;
+    row.querySelector(".btn-remove-key").addEventListener("click", () => {
+      onRemoveCallback(idx);
+    });
+    container.appendChild(row);
+  });
+}
+
+function refreshAllKeyPools() {
+  renderKeyPool("gemini-keys-list", "gemini-count-badge", geminiKeysList, (idx) => {
+    geminiKeysList.splice(idx, 1);
+    refreshAllKeyPools();
+  });
+  renderKeyPool("openrouter-keys-list", "openrouter-count-badge", openrouterKeysList, (idx) => {
+    openrouterKeysList.splice(idx, 1);
+    refreshAllKeyPools();
+  });
+  renderKeyPool("groq-keys-list", "groq-count-badge", groqKeysList, (idx) => {
+    groqKeysList.splice(idx, 1);
+    refreshAllKeyPools();
+  });
+}
+
+// Add Key Buttons Listeners
+document.getElementById("btn-add-gemini-key")?.addEventListener("click", () => {
+  const input = document.getElementById("input-new-gemini-key");
+  const val = input.value.trim();
+  if (!val) return;
+  if (!geminiKeysList.includes(val)) {
+    geminiKeysList.push(val);
+    input.value = "";
+    refreshAllKeyPools();
+  } else {
+    alert("This Gemini key is already in the pool.");
+  }
+});
+
+document.getElementById("btn-add-openrouter-key")?.addEventListener("click", () => {
+  const input = document.getElementById("input-new-openrouter-key");
+  const val = input.value.trim();
+  if (!val) return;
+  if (!openrouterKeysList.includes(val)) {
+    openrouterKeysList.push(val);
+    input.value = "";
+    refreshAllKeyPools();
+  } else {
+    alert("This OpenRouter key is already in the pool.");
+  }
+});
+
+document.getElementById("btn-add-groq-key")?.addEventListener("click", () => {
+  const input = document.getElementById("input-new-groq-key");
+  const val = input.value.trim();
+  if (!val) return;
+  if (!groqKeysList.includes(val)) {
+    groqKeysList.push(val);
+    input.value = "";
+    refreshAllKeyPools();
+  } else {
+    alert("This Groq key is already in the pool.");
+  }
+});
+
 async function loadConfig() {
   try {
     const res = await apiFetch("/api/config");
@@ -349,13 +487,33 @@ async function loadConfig() {
     cfgBatchSize.value = currentConfig.batch_size || 100;
     cfgAutoDispatch.value = String(currentConfig.auto_dispatch !== false);
 
-    cfgGeminiKey.value = currentConfig.gemini_api_key || "";
-    cfgOpenrouterKey.value = currentConfig.openrouter_api_key || "";
-    cfgGroqKey.value = currentConfig.groq_api_key || "";
+    // Multi-key pools
+    geminiKeysList = Array.isArray(currentConfig.gemini_keys) ? [...currentConfig.gemini_keys] : [];
+    openrouterKeysList = Array.isArray(currentConfig.openrouter_keys) ? [...currentConfig.openrouter_keys] : [];
+    groqKeysList = Array.isArray(currentConfig.groq_keys) ? [...currentConfig.groq_keys] : [];
+
+    // Fallbacks
+    if (geminiKeysList.length === 0 && currentConfig.gemini_api_key) {
+      geminiKeysList.push(currentConfig.gemini_api_key);
+    }
+    if (openrouterKeysList.length === 0 && currentConfig.openrouter_api_key) {
+      openrouterKeysList.push(currentConfig.openrouter_api_key);
+    }
+    if (groqKeysList.length === 0 && currentConfig.groq_api_key) {
+      groqKeysList.push(currentConfig.groq_api_key);
+    }
+
+    refreshAllKeyPools();
+
     if (cfgTavilyKey) cfgTavilyKey.value = currentConfig.tavily_api_key || "";
     if (cfgBraveKey) cfgBraveKey.value = currentConfig.brave_api_key || "";
     if (cfgExaKey) cfgExaKey.value = currentConfig.exa_api_key || "";
     cfgSearchEnabled.checked = currentConfig.web_search_enabled !== false;
+
+    const smartSearchCheckbox = document.getElementById("cfg-smart-search-enabled");
+    if (smartSearchCheckbox) {
+      smartSearchCheckbox.checked = currentConfig.smart_search_enabled !== false;
+    }
 
     // Radio
     if (cfgEndpointUrl.value.includes("localhost")) {
@@ -363,7 +521,9 @@ async function loadConfig() {
     } else {
       envProd.checked = true;
     }
-  } catch (e) {}
+  } catch (e) {
+    console.error("loadConfig error:", e);
+  }
 }
 
 envProd.addEventListener("change", () => {
@@ -399,18 +559,23 @@ btnTestWebhook.addEventListener("click", async () => {
 });
 
 btnSaveConfig.addEventListener("click", async () => {
+  const smartSearchCheckbox = document.getElementById("cfg-smart-search-enabled");
   const payload = {
     examforge_url: cfgEndpointUrl.value.trim(),
     examforge_api_key: cfgApiKey.value.trim(),
     batch_size: parseInt(cfgBatchSize.value) || 100,
     auto_dispatch: cfgAutoDispatch.value === "true",
-    gemini_api_key: cfgGeminiKey.value.trim(),
-    openrouter_api_key: cfgOpenrouterKey.value.trim(),
-    groq_api_key: cfgGroqKey.value.trim(),
+    gemini_keys: geminiKeysList,
+    openrouter_keys: openrouterKeysList,
+    groq_keys: groqKeysList,
+    gemini_api_key: geminiKeysList[0] || "",
+    openrouter_api_key: openrouterKeysList[0] || "",
+    groq_api_key: groqKeysList[0] || "",
     tavily_api_key: cfgTavilyKey ? cfgTavilyKey.value.trim() : "",
     brave_api_key: cfgBraveKey ? cfgBraveKey.value.trim() : "",
     exa_api_key: cfgExaKey ? cfgExaKey.value.trim() : "",
     web_search_enabled: cfgSearchEnabled.checked,
+    smart_search_enabled: smartSearchCheckbox ? smartSearchCheckbox.checked : true,
   };
 
   try {
@@ -419,7 +584,7 @@ btnSaveConfig.addEventListener("click", async () => {
       body: JSON.stringify(payload),
     });
     if (res.ok) {
-      alert("Configuration saved successfully!");
+      alert("Configuration & Multi-Key Pools saved successfully! Active immediately without restarting.");
       loadConfig();
     } else {
       alert("Failed to save configuration.");
@@ -722,11 +887,11 @@ btnSaveTree.addEventListener("click", async () => {
 
 // ================= INITIALIZATION =================
 function initApp() {
+  if (!authToken) return;
   loadConfig();
   loadSubjects();
   loadSyllabusTab();
-  pollWorker();
-  setInterval(pollWorker, 3000);
+  startPolling();
 }
 
 // Start Auth Check on Page Load

@@ -30,7 +30,7 @@ for d in [SYLLABUS_DIR, PARSED_SYLLABUS_DIR, BLUEPRINTS_DIR, TEMPLATES_DIR,
 
 # ── Gemini API ───────────────────────────────────────────────────────────
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 
 # ── Generation Settings ─────────────────────────────────────────────────
 GENERATION_BATCH_SIZE = int(os.getenv("GENERATION_BATCH_SIZE", "8"))
@@ -71,11 +71,11 @@ DEFAULT_QUESTION_TYPE_DISTRIBUTION = {
 # 1st Priority: Google Gemini
 # 2nd Priority: OpenRouter
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "meta-llama/llama-3.3-70b-instruct")
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "nvidia/nemotron-3-ultra:free")
 
 # 3rd Priority: Groq (Ultra-fast Llama 3.3 70B fallback)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+GROQ_MODEL = os.getenv("GROQ_MODEL", "meta-llama/llama-4-scout-17b-16e-instruct")
 
 # ── Free Web Search Providers Cascade (Tavily → Brave → Exa) ─────────────
 # 1. Tavily: 1,000 free credits/month

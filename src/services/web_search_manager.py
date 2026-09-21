@@ -35,6 +35,7 @@ class WebSearchManager:
         self.brave_key = (brave_key if brave_key is not None else BRAVE_API_KEY) or ""
         self.exa_key = (exa_key if exa_key is not None else EXA_API_KEY) or ""
         self.enabled = enabled if enabled is not None else WEB_SEARCH_ENABLED
+        self.smart_enabled = True
         self.last_provider_used: Optional[str] = None
 
     def reload_config(self, config: dict):
@@ -47,6 +48,63 @@ class WebSearchManager:
             self.exa_key = config["exa_api_key"].strip()
         if "web_search_enabled" in config and config["web_search_enabled"] is not None:
             self.enabled = bool(config["web_search_enabled"])
+        if "smart_search_enabled" in config and config["smart_search_enabled"] is not None:
+            self.smart_enabled = bool(config["smart_search_enabled"])
+
+    def detect_realworld_need(self, subject_name: str, topic_name: str, concepts: list | None = None) -> tuple[bool, str]:
+        """
+        Smart Real-World Intent Detector:
+        Analyzes subject, topic, and sub-concepts to determine whether live online web search
+        is required to ensure real-world accuracy (e.g. current events, policies, latest discoveries,
+        laws, schemes, awards, statistics, or recency words).
+        
+        Returns: (needs_search: bool, search_query: str)
+        """
+        import re
+        if not self.enabled or not self.smart_enabled:
+            return False, ""
+
+        text_to_check = f"{subject_name} {topic_name} "
+        if concepts:
+            for c in concepts[:4]:
+                if isinstance(c, dict):
+                    text_to_check += f"{c.get('name', '')} {c.get('description', '')} "
+                elif isinstance(c, str):
+                    text_to_check += f"{c} "
+        text_lower = text_to_check.lower()
+
+        # 1. Subject-level triggers
+        gk_triggers = ["general knowledge", "gk", "current affairs", "general studies", "general awareness", "contemporary"]
+        if any(t in text_lower for t in gk_triggers):
+            return True, f"{subject_name} {topic_name} current developments facts 2024 2025"
+
+        # 2. Temporal & Recency triggers
+        recency_keywords = [
+            "2023", "2024", "2025", "2026", "recent", "current", "latest", "newest", "modern developments",
+            "recently", "amendment", "update", "new policy", "ongoing", "upcoming", "contemporary"
+        ]
+        if any(re.search(r'\b' + re.escape(w) + r'\b', text_lower) for w in recency_keywords):
+            return True, f"{subject_name} {topic_name} latest updates facts 2024 2025"
+
+        # 3. Governance, Laws, Schemes, International Organizations
+        governance_keywords = [
+            "government scheme", "yojana", "act", "statute", "policy", "national policy", "nep", "rbi",
+            "budget", "census", "treaty", "summit", "g20", "brics", "cop", "un", "unesco", "who",
+            "isro", "nasa", "drdo", "mission", "satellite", "index", "ranking", "olympics", "world cup",
+            "sports award", "padma", "bharat ratna", "nobel prize", "appointment", "chief justice", "election"
+        ]
+        if any(re.search(r'\b' + re.escape(w) + r'\b', text_lower) for w in governance_keywords):
+            return True, f"{subject_name} {topic_name} official facts updates"
+
+        # 4. Special Ed & Welfare Policies (e.g. RPwD Act notifications, government guidelines)
+        special_ed_policy_keywords = [
+            "rpwd", "pwd act", "national institute", "rehabilitation council", "rci", "schemes for disabled",
+            "accessible india", "sugamya bharat", "udid card", "nep 2020 inclusive education"
+        ]
+        if any(w in text_lower for w in special_ed_policy_keywords):
+            return True, f"{subject_name} {topic_name} government schemes guidelines updates"
+
+        return False, ""
 
     def _search_tavily(self, query: str, num_results: int = 5) -> list[dict]:
         """Tavily Search API (1,000 free credits/month)."""

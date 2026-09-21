@@ -51,9 +51,10 @@ class GenerationWorker:
         self.current_topic: str = ""
         self.last_action: str = "Idle"
         self.activity_logs: list[dict] = []
+        self.loop: Optional[asyncio.AbstractEventLoop] = None
 
     def log_event(self, message: str, level: str = "info"):
-        """Log event to memory for live UI streaming."""
+        """Log event to memory for live UI streaming and terminal stdout."""
         entry = {
             "timestamp": datetime.now(timezone.utc).strftime("%H:%M:%S"),
             "message": message,
@@ -63,24 +64,37 @@ class GenerationWorker:
         if len(self.activity_logs) > 60:
             self.activity_logs.pop(0)
         logger.info(message)
+        print(f"[{entry['timestamp']}] [WORKER-{level.upper()}] {message}", flush=True)
 
-    def start(self):
+    def start(self, loop: Optional[asyncio.AbstractEventLoop] = None):
         """Start the background generation worker."""
         if not self.is_running:
             self.is_running = True
             self.is_paused = False
             self.log_event("Generation worker started.", "success")
-            self._task = asyncio.create_task(self._run_loop())
+            target_loop = loop or self.loop
+            if target_loop and target_loop.is_running():
+                self._task = target_loop.create_task(self._run_loop())
+            else:
+                try:
+                    running_loop = asyncio.get_running_loop()
+                    self._task = running_loop.create_task(self._run_loop())
+                except RuntimeError:
+                    try:
+                        main_loop = asyncio.get_event_loop()
+                        self._task = asyncio.run_coroutine_threadsafe(self._run_loop(), main_loop)
+                    except Exception as e:
+                        logger.error(f"Failed to schedule generation task: {e}")
 
     def pause(self):
         """Pause generation gracefully."""
         self.is_paused = True
         self.log_event("Generation worker paused.", "warning")
 
-    def resume(self):
+    def resume(self, loop: Optional[asyncio.AbstractEventLoop] = None):
         """Resume generation."""
         if not self.is_running:
-            self.start()
+            self.start(loop=loop)
         else:
             self.is_paused = False
             self.log_event("Generation worker resumed.", "success")
@@ -163,14 +177,18 @@ class GenerationWorker:
 
         self.current_topic = topic_name
 
-        # 2. Check if GK / Current Affairs to activate web search cascade
+        # 2. Smart Real-World Intent Detection (Any subject requiring online real-world context)
         is_gk = "knowledge" in subject_name.lower() or "current" in subject_name.lower() or "gk" in subject_name.lower()
+        needs_search, search_query = self.search_manager.detect_realworld_need(subject_name, topic_name, concepts_list)
+        if not needs_search and is_gk and self.search_manager.enabled:
+            needs_search = True
+            search_query = f"{subject_name} {topic_name} current affairs developments facts 2024 2025"
+
         search_context = ""
         loop = asyncio.get_running_loop()
 
-        if is_gk and self.search_manager.enabled:
-            search_query = f"{subject_name} {topic_name} current affairs events facts 2024 2025"
-            self.log_event(f"Executing web search cascade (Tavily → Brave → Exa) for [{topic_name}]...")
+        if needs_search and self.search_manager.enabled:
+            self.log_event(f"[SMART-SEARCH] Real-world online context detected for [{subject_name} -> {topic_name}]. Cascading Tavily → Brave → Exa...")
             try:
                 search_res = await loop.run_in_executor(
                     None, lambda: self.search_manager.search(search_query, num_results=4)
@@ -178,28 +196,30 @@ class GenerationWorker:
                 if search_res.get("snippets"):
                     search_context = search_res.get("formatted_context", "")
                     prov_used = search_res.get("provider_used", "none").capitalize()
-                    self.log_event(f"Web search ground-truth retrieved via {prov_used} ({len(search_res['snippets'])} snippets).", "success")
+                    self.log_event(f"Online ground-truth retrieved via {prov_used} ({len(search_res['snippets'])} snippets).", "success")
             except Exception as e:
                 logger.warning(f"Web search execution error: {e}")
 
         # 3. Build Prompt with grounded search context
         prompt = self._build_generation_prompt(
-            subject_name, topic_name, exam_code, is_gk, concepts_list, search_context=search_context
+            subject_name, topic_name, exam_code, is_gk or bool(search_context), concepts_list, search_context=search_context
         )
 
-        self.log_event(f"Requesting candidates for [{subject_name}] -> {topic_name} (GK Search: {'Active' if search_context else 'None'})...")
+        search_tag = "Active" if search_context else "None"
+        self.log_event(f"Requesting candidates for [{subject_name}] -> {topic_name} (Smart Web Search: {search_tag})...")
 
-        # Execute LLM call in executor to not block async loop
+        # Execute LLM call in executor with multi-key pool fallback
         try:
             raw_response = await loop.run_in_executor(
-                None, lambda: self.llm.generate_json(prompt, is_gk=is_gk, temperature=0.3)
+                None, lambda: self.llm.generate_json(prompt, is_gk=is_gk or bool(search_context), temperature=0.3)
             )
         except Exception as e:
-            self.log_event(f"LLM generation failed: {e}", "error")
+            self.log_event(f"All LLM key pools currently busy: {str(e)[:100]}. Backing off gracefully...", "warning")
+            await asyncio.sleep(10)
             return
 
         if not raw_response or not isinstance(raw_response, list):
-            self.log_event(f"Invalid JSON returned for {subject_name}", "warning")
+            self.log_event(f"No questions parsed for {subject_name}. Moving to next subject in cycle.", "warning")
             return
 
         # 4. Validate and Save

@@ -1,8 +1,27 @@
-google-generativeai>=0.8.0
+# Web Framework & API Server
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
 pydantic>=2.0.0
 python-dotenv>=1.0.0
+python-multipart>=0.0.6
+
+# Database & Supabase PostgreSQL
+psycopg2-binary>=2.9.9
+
+# AI & LLM Providers
+google-generativeai>=0.8.0
+requests>=2.31.0
+httpx>=0.25.0
+tenacity>=8.2.0
+
+# Authentication & Security
+bcrypt>=4.0.0
+pyjwt>=2.8.0
+
+# Mathematical & Analytical Processing
 sympy>=1.12
 scikit-learn>=1.3.0
+
+# CLI & Formatting Tools
 click>=8.1.0
 rich>=13.0.0
-tenacity>=8.2.0

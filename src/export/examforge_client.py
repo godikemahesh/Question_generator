@@ -25,28 +25,38 @@ class ExamForgeClient:
 
     def format_question_for_ingest(self, q: dict) -> dict:
         """Format a single question to the exact ExamForge schema."""
-        # Normalize correct_answer to letter A, B, C, D
-        ca = str(q.get("correct_answer", "A")).strip().upper()
+        # Normalize correct_answer to letter 'A', 'B', 'C', or 'D'
+        ca = str(q.get("correct_answer") or q.get("correctAnswer") or "A").strip().upper()
         if ca in ["0", "1", "2", "3"]:
             ca = ["A", "B", "C", "D"][int(ca)]
         elif ca not in ["A", "B", "C", "D"]:
             ca = "A"
 
-        # Normalize difficulty
+        # Normalize difficulty: 'Easy', 'Medium', or 'Hard'
         diff = str(q.get("difficulty", "Medium")).strip().capitalize()
         if diff not in ["Easy", "Medium", "Hard"]:
             diff = "Medium"
 
+        # Normalize tags (comma-separated string or list)
+        tags = q.get("tags")
+        if isinstance(tags, list):
+            tags = ", ".join(str(t).strip() for t in tags if t)
+        elif not tags:
+            subj = q.get("subject_name", "") or q.get("subjectName", "")
+            top = q.get("topic_name", "") or q.get("topicName", "")
+            tags_list = [t.strip().lower() for t in [subj, top] if t]
+            tags = ", ".join(tags_list) if tags_list else "general"
+
         return {
-            "questionText": q.get("question_text", ""),
-            "optionA": q.get("option_a", ""),
-            "optionB": q.get("option_b", ""),
-            "optionC": q.get("option_c", ""),
-            "optionD": q.get("option_d", ""),
+            "questionText": q.get("question_text") or q.get("questionText", ""),
+            "optionA": q.get("option_a") or q.get("optionA", ""),
+            "optionB": q.get("option_b") or q.get("optionB", ""),
+            "optionC": q.get("option_c") or q.get("optionC", ""),
+            "optionD": q.get("option_d") or q.get("optionD", ""),
             "correctAnswer": ca,
             "explanation": q.get("explanation", ""),
             "difficulty": diff,
-            "tags": q.get("tags") or f"{q.get('subject_name', '').lower()}, {q.get('topic_name', '').lower()}",
+            "tags": tags,
         }
 
     def dispatch_batch(
@@ -68,7 +78,7 @@ class ExamForgeClient:
         formatted_questions = [self.format_question_for_ingest(q) for q in questions]
 
         payload = {
-            "examCode": exam_code,
+            "examCode": exam_code or "RRB",
             "subjectName": subject_name,
             "topicName": topic_name,
             "questions": formatted_questions,
@@ -77,7 +87,6 @@ class ExamForgeClient:
         headers = {
             "Content-Type": "application/json",
             "x-api-key": target_key,
-            "Authorization": f"Bearer {target_key}",
         }
 
         logger.info(f"Sending batch of {len(formatted_questions)} questions to {target_url}...")
@@ -112,29 +121,27 @@ class ExamForgeClient:
 
         return False, 0, {"error": f"Failed to connect after 3 attempts: {last_error}"}
 
-    def test_connection(self, endpoint_url: str = "", api_key: str = "") -> tuple[bool, str]:
+    def test_connection(self, endpoint_url: str = "", api_key: str = "", exam_code: str = "RRB") -> tuple[bool, str]:
         """
         Send a lightweight dummy question test payload to verify endpoint connectivity.
         """
         dummy_q = [{
-            "question_text": "TEST PING: What is the unit of electric current?",
-            "option_a": "Ampere",
-            "option_b": "Volt",
-            "option_c": "Ohm",
-            "option_d": "Watt",
-            "correct_answer": "A",
-            "explanation": "Electric current is measured in Amperes.",
+            "questionText": "What is the speed of light in a vacuum?",
+            "optionA": "3 x 10^8 m/s",
+            "optionB": "3 x 10^6 m/s",
+            "optionC": "3 x 10^5 km/s",
+            "optionD": "Both A and C",
+            "correctAnswer": "D",
+            "explanation": "3 x 10^8 m/s is equivalent to 3 x 10^5 km/s.",
             "difficulty": "Easy",
-            "tags": "test, physics",
-            "subject_name": "Test Subject",
-            "topic_name": "Test Topic",
+            "tags": "physics, optics, rrb",
         }]
 
         success, status, data = self.dispatch_batch(
             dummy_q,
-            subject_name="Test Subject",
-            topic_name="Diagnostics",
-            exam_code="TEST",
+            subject_name="General Science",
+            topic_name="Physics",
+            exam_code=exam_code or "RRB",
             endpoint_url=endpoint_url,
             api_key=api_key,
         )
