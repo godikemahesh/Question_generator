@@ -104,7 +104,7 @@ class StorageManager:
                 gemini_keys TEXT DEFAULT '[]',
                 openrouter_keys TEXT DEFAULT '[]',
                 groq_keys TEXT DEFAULT '[]',
-                gemini_models TEXT DEFAULT '["gemini-2.5-flash", "gemini-1.5-flash", "gemini-2.0-flash", "gemini-1.5-pro"]',
+                gemini_models TEXT DEFAULT '["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-2.5-flash"]',
                 tavily_api_key TEXT,
                 brave_api_key TEXT,
                 exa_api_key TEXT,
@@ -123,7 +123,7 @@ class StorageManager:
                 ("gemini_keys", "TEXT DEFAULT '[]'"),
                 ("openrouter_keys", "TEXT DEFAULT '[]'"),
                 ("groq_keys", "TEXT DEFAULT '[]'"),
-                ("gemini_models", "TEXT DEFAULT '[\"gemini-2.5-flash\", \"gemini-1.5-flash\", \"gemini-2.0-flash\", \"gemini-1.5-pro\"]'"),
+                ("gemini_models", "TEXT DEFAULT '[\"gemini-3.8-flash\", \"gemini-3.7-flash\", \"gemini-3.6-flash\", \"gemini-2.5-flash\"]'"),
                 ("smart_search_enabled", "BOOLEAN DEFAULT 1"),
             ]:
                 try:
@@ -199,8 +199,8 @@ class StorageManager:
             c.execute("SELECT id FROM app_config WHERE id = 'global'")
             if not c.fetchone():
                 c.execute(
-                    "INSERT INTO app_config (id, examforge_url, examforge_api_key, batch_size, auto_dispatch, active_provider, openrouter_search_enabled) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                    ('global', EXAMFORGE_API_URL, EXAMFORGE_API_KEY, EXAMFORGE_BATCH_SIZE, 1, 'gemini', 1)
+                    "INSERT INTO app_config (id, examforge_url, examforge_api_key, batch_size, auto_dispatch, active_provider, web_search_enabled, smart_search_enabled) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                    ('global', EXAMFORGE_API_URL, EXAMFORGE_API_KEY, EXAMFORGE_BATCH_SIZE, 1, 'gemini', 1, 1)
                 )
 
             # Seed initial default subjects if empty
