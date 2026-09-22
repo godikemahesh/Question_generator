@@ -30,7 +30,7 @@ for d in [SYLLABUS_DIR, PARSED_SYLLABUS_DIR, BLUEPRINTS_DIR, TEMPLATES_DIR,
 
 # ── Gemini API ───────────────────────────────────────────────────────────
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
 
 # ── Generation Settings ─────────────────────────────────────────────────
 GENERATION_BATCH_SIZE = int(os.getenv("GENERATION_BATCH_SIZE", "8"))
@@ -71,7 +71,7 @@ DEFAULT_QUESTION_TYPE_DISTRIBUTION = {
 # 1st Priority: Google Gemini
 # 2nd Priority: OpenRouter
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "nvidia/nemotron-3-ultra:free")
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "openrouter/free")
 
 # 3rd Priority: Groq (Ultra-fast Llama 3.3 70B fallback)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")

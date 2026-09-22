@@ -247,9 +247,12 @@ class StorageManager:
         if not cfg.get("groq_keys") and cfg.get("groq_api_key"):
             cfg["groq_keys"] = [cfg["groq_api_key"]]
 
-        # Default gemini models if empty
-        if not cfg.get("gemini_models"):
-            cfg["gemini_models"] = ["gemini-2.5-flash", "gemini-1.5-flash", "gemini-2.0-flash", "gemini-1.5-pro"]
+        # Filter out deprecated models that return 404 from Google
+        deprecated = {"gemini-1.5-flash", "gemini-1.5-pro", "gemini-2.0-flash", "gemini-2.5-pro", "gemini-2.5-flash-lite"}
+        current_models = [m for m in cfg.get("gemini_models", []) if m not in deprecated]
+        if not current_models:
+            current_models = ["gemini-3.6-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-flash-lite-latest", "gemini-2.5-flash"]
+        cfg["gemini_models"] = current_models
 
         if "smart_search_enabled" not in cfg:
             cfg["smart_search_enabled"] = True

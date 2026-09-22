@@ -30,13 +30,29 @@ from config.settings import (
 
 logger = logging.getLogger(__name__)
 
-# Default Gemini model cascade priority (best quality → fallback)
+# Default Gemini model cascade priority (verified live working models)
 DEFAULT_GEMINI_MODELS = [
-    "gemini-3.8-flash",
-    "gemini-3.7-flash",
     "gemini-3.6-flash",
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-flash-lite-latest",
     "gemini-2.5-flash",
 ]
+
+
+DEPRECATED_MODELS = {
+    "gemini-1.5-flash",
+    "gemini-1.5-pro",
+    "gemini-2.0-flash",
+    "gemini-2.5-pro",
+    "gemini-2.5-flash-lite",
+}
+
+
+def sanitize_gemini_models(models: Optional[list[str]]) -> list[str]:
+    """Filter out deprecated/retired models from any saved config or input."""
+    valid = [m for m in (models or []) if m and m not in DEPRECATED_MODELS]
+    return valid if valid else DEFAULT_GEMINI_MODELS
 
 
 class MultiProviderLLM:
@@ -67,8 +83,8 @@ class MultiProviderLLM:
         if not self.groq_keys and (groq_key or GROQ_API_KEY):
             self.groq_keys = [groq_key or GROQ_API_KEY]
 
-        # 2. Gemini model priority list
-        self.gemini_models: list[str] = gemini_models or DEFAULT_GEMINI_MODELS
+        # 2. Gemini model priority list (sanitized against deprecated models)
+        self.gemini_models: list[str] = sanitize_gemini_models(gemini_models)
 
         # 3. Health & Cooldown Tracking { key_identifier: timestamp_until_cooldown }
         self.cooldowns: dict[str, float] = {}
@@ -77,7 +93,7 @@ class MultiProviderLLM:
 
         # 4. Active provider tracking
         self.last_used_provider: str = "gemini"
-        self.last_used_model: str = self.gemini_models[0] if self.gemini_models else "gemini-3.8-flash"
+        self.last_used_model: str = self.gemini_models[0] if self.gemini_models else "gemini-3.6-flash"
         self.last_used_key_preview: str = ""
 
     def update_pools(
@@ -95,7 +111,7 @@ class MultiProviderLLM:
         if groq_keys is not None:
             self.groq_keys = [k.strip() for k in groq_keys if k and k.strip()]
         if gemini_models is not None and len(gemini_models) > 0:
-            self.gemini_models = gemini_models
+            self.gemini_models = sanitize_gemini_models(gemini_models)
         logger.info(
             f"MultiProviderLLM pools updated: Gemini={len(self.gemini_keys)} keys, "
             f"OpenRouter={len(self.openrouter_keys)} keys, Groq={len(self.groq_keys)} keys."
@@ -181,6 +197,11 @@ class MultiProviderLLM:
                         # Put this model on 45s cooldown and try next model for this key
                         self._set_cooldown(combo_id, 45.0, "Model rate limit")
                         logger.warning(f"Gemini model '{model_name}' hit rate limit on key {key[:6]}... Trying next model.")
+                        continue
+                    elif "404" in err_str or "not found" in err_str or "no longer available" in err_str:
+                        # Model is deprecated or doesn't exist - skip to next model
+                        self._set_cooldown(combo_id, 86400.0, "Model deprecated/not found")
+                        logger.warning(f"Gemini model '{model_name}' deprecated/not found (404). Skipping to next model.")
                         continue
                     else:
                         errors.append(f"Gemini {model_name} error: {str(e)[:100]}")
